@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>היי צוות · אופיר אטיאס</title>
+<title>Ofir Attias - Handover - July 26</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
@@ -33,8 +33,11 @@ body{line-height:1.5;background:linear-gradient(180deg,#F6F4E1 0%,#F2F0D9 45%,#E
   padding:14px 24px;background:rgba(255,255,255,.55);border-bottom:1px solid rgba(0,0,0,.06);
   -webkit-backdrop-filter:blur(22px) saturate(170%);backdrop-filter:blur(22px) saturate(170%)}
 .chrome a{text-decoration:none;font-family:inherit}
-.ch-home{color:var(--mute);font-size:13.5px;padding:8px 12px;border-radius:999px;transition:all .3s var(--spring)}
-.ch-home:hover{color:var(--ink);background:rgba(0,0,0,.045)}
+.ch-home{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-size:14.5px;font-weight:500;
+  border:1px solid rgba(0,0,0,.08);background:rgba(255,255,255,.72);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  padding:10px 20px;border-radius:999px;box-shadow:0 1px 2px rgba(0,0,0,.05);transition:all .3s var(--spring)}
+.ch-home:hover{background:var(--sun);border-color:var(--sunDeep);transform:translateY(-1px);box-shadow:0 6px 16px rgba(232,217,64,.4)}
 .ch-switch{color:var(--ink);font-size:13.5px;font-weight:500;border:1px solid rgba(0,0,0,.06);
   background:rgba(255,255,255,.7);padding:9px 18px;border-radius:999px;
   -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
@@ -47,7 +50,8 @@ body{line-height:1.5;background:linear-gradient(180deg,#F6F4E1 0%,#F2F0D9 45%,#E
 .mainTitle{font-size:60px;font-weight:500;letter-spacing:-.03em;line-height:1.02}
 .sunRule{height:4px;width:72px;background:var(--sun);border-radius:999px;margin:24px 0 16px}
 .sub{color:var(--mute);font-size:17px;margin-bottom:52px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
 .navCard{border-radius:26px;text-decoration:none;color:inherit;overflow:hidden;display:flex;flex-direction:column;
   border:1px solid rgba(255,255,255,.6);cursor:pointer;
   background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);
@@ -69,6 +73,72 @@ body{line-height:1.5;background:linear-gradient(180deg,#F6F4E1 0%,#F2F0D9 45%,#E
 .foot{max-width:1080px;margin:0 auto;padding:24px 32px 48px;width:100%;color:var(--muteLight);
   font-size:12px;border-top:1px solid rgba(0,0,0,.06);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:560px){.mainTitle{font-size:40px}.wrap{padding:52px 20px 32px}}
+
+/* header cluster + back button */
+.chrome-cluster{display:flex;align-items:center;gap:12px}
+.ch-back{border:1px solid var(--sunDeep);background:var(--sun);color:var(--ink);font-family:inherit;
+  font-size:13.5px;font-weight:500;padding:9px 18px;border-radius:999px;cursor:pointer;
+  box-shadow:0 1px 2px rgba(0,0,0,.06);transition:all .3s var(--spring)}
+.ch-back:hover{background:var(--sunDeep);transform:translateY(-1px)}
+
+/* August planning */
+.augWrap{max-width:1180px;margin:0 auto;padding:36px 28px 64px;width:100%}
+.augLegend{color:var(--mute);font-size:14px;margin-bottom:20px}
+.augCard{background:rgba(255,255,255,.74);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,.6);border-radius:22px;box-shadow:0 2px 6px rgba(0,0,0,.05),0 16px 40px rgba(0,0,0,.08);overflow:hidden}
+.augScroll{overflow-x:auto}
+.augTable{border-collapse:collapse;width:100%;min-width:1040px;font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.augTable th,.augTable td{padding:11px 12px;text-align:right;vertical-align:top;border-bottom:1px solid rgba(0,0,0,.06)}
+.augTable thead th{background:rgba(0,0,0,.045);font-weight:500;border-bottom:1px solid rgba(0,0,0,.16);white-space:nowrap}
+.augTable thead .pgrp{text-align:center}
+.augTable thead .cap{display:block;font-size:11px;color:var(--mute);font-weight:400;margin-top:2px}
+.augTable .pcol{border-inline-start:1px solid rgba(0,0,0,.08)}
+.augTable .num{text-align:center;font-weight:500;white-space:nowrap}
+.augTable tbody tr:nth-child(odd){background:rgba(0,0,0,.022)}
+.augTable tbody tr:hover{background:rgba(255,242,130,.18)}
+.augCat{background:rgba(255,242,130,.4);font-weight:500;width:112px;line-height:1.4}
+.augProj{font-weight:500;white-space:nowrap}
+.augOwner{display:inline-block;background:rgba(0,0,0,.06);border-radius:8px;padding:2px 10px;font-size:12px;white-space:nowrap}
+.augNote{max-width:300px;min-width:220px;color:#333;line-height:1.5;font-size:12.5px;white-space:normal}
+.augTable tfoot td{border-top:1px solid rgba(0,0,0,.16);font-weight:500}
+.augFoot td{background:rgba(0,0,0,.03)}
+.augTotal td{background:var(--paper)}
+
+/* home-nav hover popover */
+.chrome{position:relative;z-index:30}
+.chNav{position:relative;display:inline-block}
+.chNav::before{content:"";position:absolute;top:100%;inset-inline-start:0;width:220px;height:12px}
+.chCaret{color:var(--mute);font-size:11px;margin-inline-start:2px}
+.chMenu{position:absolute;top:calc(100% + 8px);inset-inline-start:0;min-width:210px;z-index:60;
+  background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(24px) saturate(170%);backdrop-filter:blur(24px) saturate(170%);
+  border:1px solid rgba(255,255,255,.6);border-radius:16px;padding:6px;
+  box-shadow:0 8px 24px rgba(0,0,0,.12),0 24px 60px rgba(0,0,0,.16);
+  opacity:0;transform:translateY(-6px) scale(.98);pointer-events:none;transform-origin:top;
+  transition:opacity .2s var(--spring),transform .2s var(--spring)}
+.chNav:hover .chMenu,.chNav:focus-within .chMenu{opacity:1;transform:none;pointer-events:auto}
+.chMenu a{display:block;text-decoration:none;color:var(--ink);font-size:14px;font-weight:500;
+  padding:10px 14px;border-radius:11px;transition:background .15s}
+.chMenu a:hover{background:rgba(0,0,0,.05)}
+.chMenu a.active{background:var(--sun)}
+
+/* august password gate (same look as team) */
+.gate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;
+  background:linear-gradient(180deg,#F6F4E1,#EEECD1)}
+.gate-card{max-width:380px;width:100%;text-align:center;border:none;border-radius:26px;padding:48px 36px;
+  background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(26px) saturate(160%);backdrop-filter:blur(26px) saturate(160%);
+  box-shadow:0 4px 12px rgba(0,0,0,.06),0 30px 70px rgba(0,0,0,.14)}
+.gate-title{font-size:26px;font-weight:500;margin:0 0 14px;position:relative;padding-bottom:12px;display:inline-block}
+.gate-title::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:52px;height:4px;background:var(--sun);border-radius:999px}
+.gate-sub{font-size:14px;color:var(--mute);line-height:1.7;margin:0 0 28px}
+.gate-label{display:block;font-size:12px;color:var(--mute);margin:0 0 6px;text-align:right}
+.gate-input{width:100%;box-sizing:border-box;padding:14px 16px;border:1px solid rgba(0,0,0,.1);border-radius:14px;
+  font-family:inherit;font-size:15px;background:rgba(255,255,255,.85);color:var(--ink);margin:0 0 16px}
+.gate-input:focus{outline:none;border-color:var(--sunDeep);box-shadow:0 0 0 4px rgba(255,242,130,.5)}
+.gate-btn{width:100%;padding:15px;background:var(--sun);border:none;border-radius:14px;font-family:inherit;font-weight:500;
+  font-size:15px;cursor:pointer;box-shadow:0 2px 8px rgba(232,217,64,.5);transition:all .3s var(--spring)}
+.gate-btn:hover{background:var(--sunDeep);transform:translateY(-1px);box-shadow:0 6px 16px rgba(232,217,64,.55)}
+.gate-error{color:#B14A3C;font-size:13px;margin:14px 0 0}
+.gate-note{font-size:11px;color:var(--muteLight);margin:20px 0 0}
 </style>
 </head>
 <body>
@@ -103,7 +173,6 @@ body{line-height:1.5;background:linear-gradient(180deg,#F6F4E1 0%,#F2F0D9 45%,#E
         <div class="cardBody">
           <div class="navName">פרוייקטים</div>
           <div class="navDesc">לאומי טרייד · מנורה · מאוחדת · רידמן · הנדריקס · פייבוקס · מערך הדיגיטל · וסופר פארם</div>
-          <div class="enter"><span class="arw">◂</span> כניסה</div>
         </div>
       </a>
 
@@ -123,10 +192,34 @@ body{line-height:1.5;background:linear-gradient(180deg,#F6F4E1 0%,#F2F0D9 45%,#E
         <div class="cardBody">
           <div class="navName">צוות</div>
           <div class="navDesc">יעל, רתם, ליטל ומאי</div>
-          <div class="enter"><span class="arw">◂</span> כניסה</div>
           <div class="lockNote">🔒 מוגן בסיסמה — מכיל מידע רגיש</div>
         </div>
       </a>
+      <a class="navCard" href="#august">
+        <div class="banner">
+          <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="איור תכנון אוגוסט">
+            <g stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="150" y1="34" x2="150" y2="52"/><line x1="250" y1="34" x2="250" y2="52"/></g>
+            <rect x="94" y="48" width="212" height="128" rx="16" fill="#FFFFFF" stroke="#000" stroke-width="3"/>
+            <path d="M110 48 h180 a16 16 0 0 1 16 16 v12 h-212 v-12 a16 16 0 0 1 16 -16 z" fill="#FFF282" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
+            <g stroke="#000" stroke-width="2.5" stroke-linejoin="round">
+              <rect x="112" y="92" width="36" height="26" rx="7" fill="#FFFFFF"/>
+              <rect x="160" y="92" width="36" height="26" rx="7" fill="#FF8FB0"/>
+              <rect x="208" y="92" width="36" height="26" rx="7" fill="#FFFFFF"/>
+              <rect x="256" y="92" width="36" height="26" rx="7" fill="#FFFFFF"/>
+              <rect x="112" y="128" width="36" height="26" rx="7" fill="#FFFFFF"/>
+              <rect x="160" y="128" width="36" height="26" rx="7" fill="#FFFFFF"/>
+              <rect x="208" y="128" width="36" height="26" rx="7" fill="#FFF282"/>
+              <rect x="256" y="128" width="36" height="26" rx="7" fill="#FFFFFF"/>
+            </g>
+          </svg>
+        </div>
+        <div class="cardBody">
+          <div class="navName">תכנון אוגוסט</div>
+          <div class="navDesc">חלוקת שעות ואחוזי משרה לפי מעצב/ת ופרוייקט לקראת חודש אוגוסט</div>
+          <div class="lockNote">🔒 מוגן בסיסמה — מכיל מידע רגיש</div>
+        </div>
+      </a>
+
 
     </div>
   </div>
@@ -139,8 +232,18 @@ body{line-height:1.5;background:linear-gradient(180deg,#F6F4E1 0%,#F2F0D9 45%,#E
 <!-- ==================== PROJECTS ==================== -->
 <section id="view-projects" class="view frame">
   <div class="chrome">
-    <a class="ch-home" href="#home">● דף הבית</a>
-    <a class="ch-switch" href="#employees">מעבר לצוות ←</a>
+    <div class="chrome-cluster">
+      <div class="chNav">
+      <a class="ch-home" href="#home">● דף הבית <span class="chCaret">▾</span></a>
+      <div class="chMenu" role="menu">
+        <a href="#home" data-view="home">דף הבית</a>
+        <a href="#projects" data-view="projects">פרוייקטים</a>
+        <a href="#employees" data-view="employees">צוות</a>
+        <a href="#august" data-view="august">תכנון אוגוסט</a>
+      </div>
+    </div>
+      <button type="button" class="ch-back" id="projBackBtn" style="display:none">← חזרה לכל הפרוייקטים</button>
+    </div>
   </div>
   <iframe title="פרוייקטים" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;he&quot; dir=&quot;rtl&quot;&gt;
@@ -308,8 +411,9 @@ body{background:linear-gradient(180deg,#F6F4E1 0%,#F2F0D9 45%,#EEECD1 100%);back
 .detailTitle{font-size:40px;letter-spacing:-.02em}
 .backBtn{border-radius:999px;border:1px solid rgba(0,0,0,.06);background:rgba(255,255,255,.72);
   -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 2px rgba(0,0,0,.04);
-  padding:11px 22px;transition:all .3s cubic-bezier(.22,1,.36,1)}
+  padding:12px 26px;font-size:15px;font-weight:500;margin-bottom:4px;transition:all .3s cubic-bezier(.22,1,.36,1)}
 .backBtn:hover{background:var(--sun);border-color:var(--sunDeep);transform:translateY(-1px)}
+body.framed .backBtn{display:none}
 a.lnk{border-bottom:none;background:rgba(255,242,130,.35);border-radius:6px;padding:1px 6px}
 a.lnk:hover{background:var(--sun)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -342,11 +446,32 @@ a.lnk:hover{background:var(--sun)}
 .ddOpt .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
 .ddChk{margin-inline-start:auto;color:var(--ink);opacity:0;font-size:12px}
 .ddOpt[aria-selected=&quot;true&quot;] .ddChk{opacity:1}
+
+/* project tabs */
+.projHeader{display:none}
+body.detailOpen .projHeader{display:block;margin-bottom:4px}
+.projTabs{display:flex;gap:6px;overflow-x:auto;padding:6px;border-radius:16px;margin:8px 0 20px;
+  position:sticky;top:0;z-index:5;
+  background:rgba(255,255,255,.62);-webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%);
+  box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.07)}
+.projTab{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;border:none;background:transparent;
+  font-family:inherit;font-size:13.5px;font-weight:500;color:var(--ink);padding:9px 14px;border-radius:12px;
+  cursor:pointer;white-space:nowrap;transition:background .2s}
+.projTab:hover{background:rgba(0,0,0,.05)}
+.projTab.active{background:var(--sun);box-shadow:0 1px 2px rgba(0,0,0,.06),0 4px 12px rgba(232,217,64,.4)}
+.projTab .logoBox{width:18px;height:18px;flex-shrink:0}
+  .ticketPill{display:inline-flex;align-items:center;font-variant-numeric:tabular-nums;font-weight:500;
+    font-size:12.5px;letter-spacing:.02em;background:rgba(255,242,130,.55);border:1px solid var(--sunDeep);
+    border-radius:8px;padding:2px 9px}
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;div class=&quot;wrap&quot;&gt;
-&lt;!-- ===================== LIST VIEW ===================== --&gt;
+&lt;div class=&quot;projHeader&quot;&gt;
+    &lt;nav class=&quot;projTabs&quot; id=&quot;projTabs&quot; aria-label=&quot;ניווט בין פרוייקטים&quot;&gt;&lt;/nav&gt;
+  &lt;/div&gt;
+
+  &lt;!-- ===================== LIST VIEW ===================== --&gt;
   &lt;div class=&quot;listView&quot;&gt;
     &lt;div class=&quot;eyebrow&quot;&gt;לקראת יציאה לחל״ד של אופיר · יולי 26&lt;/div&gt;
     &lt;h1 class=&quot;mainTitle&quot;&gt;מעבר פרוייקטים&lt;/h1&gt;
@@ -398,7 +523,8 @@ const projects = [
   status:&#x27;work&#x27;, owner:&#x27;יעל, בועז&#x27;,
   table:{
     scope:&#x27;כרגע 200% משרה לשני הפרוייקטים&#x27;,
-    design:&#x27;רתם (עד סוף יולי), יעל, מאי&#x27;,
+    design:&#x27;רתם, יעל, מאי&#x27;,
+    ticket:&#x27;BLT25-1&#x27;,
     notes:&#x27;&#x27;
   },
   sections:[
@@ -417,8 +543,9 @@ const projects = [
       ]},
       {group:&#x27;מטעם זמינגו&#x27;, items:[
         &#x27;יעל – ניהול הפרוייקט.&#x27;,
-        &#x27;רותם – עיצוב (פתיחת תיק, ייעוץ ושווקים) - סיום משוער בפרוייקט ביולי. חשוב לוודא ולתקשר מול הלקוח&#x27;,
-        &#x27;מאי וליטל – עיצוב&#x27;
+        &#x27;רותם – עיצוב (פתיחת תיק, ייעוץ ושווקים). ברגע שרותם ייכנס באופן מלא לצוות של נורה, הוא יירד ככל הנראה מלאומי טרייד (סיום משוער באוגוסט).&#x27;,
+        &#x27;מאי וליטל – עיצוב&#x27;,
+        &#x27;בהמשך יתווסף מעצב נוסף — יש להחליט מי בהתאם לפניות בצוותים (רתם/מאי).&#x27;
       ]}
     ]},
     {n:&#x27;03&#x27;, t:&#x27;סטטוס נוכחי&#x27;, blocks:[
@@ -440,7 +567,7 @@ const projects = [
       ]}
     ]},
     {n:&#x27;07&#x27;, t:&#x27;גישה ומשאבים&#x27;, blocks:[
-      {ul:[&#x27;תיקיית הפרוייקט בפיגמה: [קישור](https://www.figma.com/files/1089850698327897083/team/1338799502363239730)&#x27;,&#x27;ניהול תכולות- [קישור](https://docs.google.com/spreadsheets/d/1TRer_yXhx1mJiJ2tf0wrNe_KdoiLtidyf6Z6pLY_vzo/edit?usp=sharing)&#x27;]}
+      {ul:[&#x27;תיקיית הפרוייקט בפיגמה: [קישור](https://www.figma.com/files/1089850698327897083/team/1338799502363239730)&#x27;,&#x27;ניהול תכולות- [קישור](https://docs.google.com/spreadsheets/d/1TRer_yXhx1mJiJ2tf0wrNe_KdoiLtidyf6Z6pLY_vzo/edit?usp=sharing)&#x27;,&#x27;סטטוס פרוייקט (מאי 25)- [קישור](https://docs.google.com/presentation/d/1kWn1mLM0KNXNBz4fbaCCAox5yC1Q5CBlnMrN8dSzQz8/edit)&#x27;]}
     ]},
     {n:&#x27;08&#x27;, t:&#x27;טיפים להתנהלות&#x27;, blocks:[
       {ul:[
@@ -448,7 +575,7 @@ const projects = [
         &#x27;לקיים Weekly פנימי עם צוות העיצוב כדי להציף חסמים ולוודא חלוקת עבודה נכונה.&#x27;,
         &#x27;להמשיך לשלוח סיכום חודשי בסוף כל חודש לחנית, אסף והמנהל החדש, הכולל את כל התכולות שבוצעו.&#x27;,
         &#x27;לבצע חפיפה מסודרת עם רותם על עולם הייעוץ ושווקים, לקראת ירידתו ההדרגתית מהפרוייקט במהלך אוגוסט.&#x27;,
-        &#x27;חשוב להם להטמיע כמה שיותר הגעה פיזית למשרדים שלהם בימי ראשון- צריך לראות מתי נכון להכניס את זה ולא לתת לזה לאאבד.&#x27;
+        &#x27;חשוב להם להטמיע כמה שיותר הגעה פיזית למשרדים שלהם בימי ראשון- צריך לראות מתי נכון להכניס את זה ולא לתת לזה לאבד.&#x27;
       ]}
     ]}
   ]
@@ -476,14 +603,37 @@ const projects = [
       {group:&#x27;מטעם זמינגו&#x27;, items:[
         &#x27;יעל – מובילת הפרוייקט וניהול הלקוח.&#x27;,
         &#x27;עדי – מעצבת הפרוייקט.&#x27;,
-        &#x27;הצוות עובד בצמוד לעולם לאומי טרייד הקיים כדי לשמור על קונסיסטנטיות בין המוצרים.&#x27;
+        &#x27;בועז – מנהל אקאונט.&#x27;
+      ]}
+    ], blocks:[
+      {sub:&#x27;חלוקת אחריות בצוות&#x27;},
+      {sub:&#x27;יעל&#x27;, ul:[
+        {li:&#x27;ניהול לקוח ופרוייקט טרייד&#x27;, sub:[
+          &#x27;הובלת הפרוייקט מול הלקוח: תכנון, סדרי עדיפויות, לוחות זמנים ותקציב&#x27;,
+          &#x27;תכנון וחלוקת משאבי העיצוב בין Trade ל-Crypto&#x27;
+        ]},
+        {li:&#x27;אחריות לשמירת קונסיסטנטיות במערכת&#x27;, sub:[
+          &#x27;בנייה והטמעה של מתודולוגיית העבודה בפרוייקט (החלטה על פגישות בריינסטורמינג משותפות, שילוב Ai בתהליך וכו׳)&#x27;,
+          &#x27;אחריות על החיבור לעולם ה-Trade והבטחת התאמה למוצר הקיים&#x27;,
+          &#x27;הובלה מקצועית בהיבטי UX: שימוש בידע הקיים, חשיבה מערכתית ובריינסטורמינג משותף&#x27;,
+          &#x27;ליווי וחניכה של עדי בכניסה לעולם ה-Trade, במטרה לאפשר לה עצמאות מקצועית הולכת וגדלה.&#x27;
+        ]}
+      ]},
+      {sub:&#x27;עדי&#x27;, ul:[
+        {li:&#x27;הובלה מקצועית של התוצרים עצמם (Hands-on)&#x27;, sub:[
+          &#x27;הובלה מקצועית של שלב הקונספט: אפיון ראשוני, חשיבה יצירתית וגיבוש פתרונות.&#x27;,
+          &#x27;אחריות על אפיון, עיצוב והכנת התוצרים לפיתוח&#x27;,
+          &#x27;עבודה בשיתוף פעולה עם מעצבת נוספת על תכולות הפרוייקט&#x27;,
+          &#x27;הבאת נקודת מבט רעננה ויצירתית לפתרון האתגרים המוצריים והקונספטואליים הנדרשים&#x27;
+        ]}
       ]}
     ]},
     {n:&#x27;03&#x27;, t:&#x27;סטטוס נוכחי&#x27;, blocks:[
       {ul:[
-        &#x27;התחלה עם מחקר עולם הקריפטו וכיווני השראות לקונספט עיצובי ואיפיוני&#x27;,
+        &#x27;התחלה עם מחקר עולם הקריפטו וכיווני השראות לקונספט עיצובי ואפיוני&#x27;,
         {li:&#x27;טרם התקבלה החלטה האם הקריפטו יהיה:&#x27;, sub:[&#x27;אזור נפרד לחלוטין בתוך לאומי טרייד.&#x27;,&#x27;או חלק אינטגרלי מעולם התיקים הקיים.&#x27;]},
-        &#x27;להחלטה הזו יש השפעה משמעותית על היררכיית המידע, חוויית המשתמש והשפה העיצובית.&#x27;
+        &#x27;להחלטה הזו יש השפעה משמעותית על היררכיית המידע, חוויית המשתמש והשפה העיצובית.&#x27;,
+        &#x27;התקיימה פגישה ראשונית להיררכיית הניווט באפליקציה (טרייד אל מול קריפטו).&#x27;
       ]}
     ]},
     {n:&#x27;04&#x27;, t:&#x27;לוחות זמנים&#x27;, blocks:[
@@ -503,15 +653,32 @@ const projects = [
       ]}
     ]},
     {n:&#x27;07&#x27;, t:&#x27;גישה ומשאבים&#x27;, blocks:[
-      {ul:[&#x27;תיקיית הפרוייקט בפיגמה&#x27;]},
-      {sub:&#x27;השראות מרכזיות&#x27;, ul:[&#x27;Coinbase&#x27;,&#x27;Kraken&#x27;,&#x27;Binance&#x27;,&#x27;Bits of Gold&#x27;,&#x27;eToro&#x27;,&#x27;Horizon.&#x27;]}
+      {ul:[&#x27;תיקיית הפרוייקט בפיגמה: [קישור](https://drive.google.com/drive/folders/1RETTETggt5besWNbFQO_ud1JYkn7wh9Q?usp=drive_link)&#x27;]}
     ]},
-    {n:&#x27;08&#x27;, t:&#x27;טיפים להתנהלות&#x27;, blocks:[
-      {ul:[
-        &#x27;לשמור על קונסיסטנטיות מלאה עם עולם לאומי טרייד הקיים.&#x27;,
-        &#x27;לפני כל החלטת UX משמעותית לוודא שהיא מתאימה גם למבנה החשבונות שייבחר בהמשך.&#x27;
+    {n:&#x27;08&#x27;, t:&#x27;תהליך העבודה והתכולות הצפויות&#x27;, blocks:[
+      {sub:&#x27;תהליך העבודה&#x27;, ul:[
+        {li:&#x27;מחקר השראות ולמידת עולם הקריפטו (מיידי)&#x27;, sub:[&#x27;השראות מעולמות מקבילים, בדגש על איפיון היררכיית המידע.&#x27;]},
+        {li:&#x27;קונספט איפיון היררכיית המידע&#x27;, sub:[
+          &#x27;קונספט היי-לבל עבור הגשת הדרישה המוצרית של לאומי (תחילת אוגוסט).&#x27;,
+          &#x27;לאומי — אחריות לשליחת 2-3 כיוונים אופציונליים להיררכיה המוצרית.&#x27;,
+          &#x27;זמינגו — עד יום ראשון (19.7) תישלח הערכת ימי העבודה הנדרשים, לקבלת האישור התקציבי.&#x27;
+        ]},
+        {li:&#x27;קונספט אפליקציה (איפיון + עיצוב) וסטייל גייד&#x27;, sub:[&#x27;עד 2 כיוונים קונספטואליים לבחירת הלקוח.&#x27;]},
+        {li:&#x27;עבודה על התכולות — שלב א׳ + ב׳&#x27;, sub:[&#x27;קבלת דרישה מוצרית ← איפיון מסכים ← עיצוב ודיטיילד ← הכנה לפיתוח ← עדכון הדיזיין סיסטם.&#x27;]},
+        &#x27;QA גרפי&#x27;
       ]},
-      {sub:&#x27;לעבוד לפי סדר העבודה שהוגדר&#x27;, ol:[&#x27;מחקר עולם הקריפטו.&#x27;,&#x27;קונספט ו-Style Guide.&#x27;,&#x27;עבודה על מסכי שלב א׳ ושלב ב׳.&#x27;,&#x27;הרחבה למוצרים נוספים בבנק.&#x27;]},
+      {sub:&#x27;מסכי המוצר — שלב א׳&#x27;, ul:[
+        &#x27;מסך ראשי — הגדרת חוויית הכניסה לעולם הקריפטו, היררכיית המידע, נקודות הכניסה והקשר בין קריפטו לניירות ערך עבור מצבי המשתמש השונים.&#x27;,
+        &#x27;אחזקות — אפיון מבנה תיק הקריפטו, הצגת שווי ואחזקות, רווח/הפסד, פירוט שכבות (Lots), גרפים והיררכיית המידע.&#x27;,
+        &#x27;טופס מסחר — אפיון תהליך הקנייה והמכירה, מבנה הטופס, סוגי הפקודות, בחירת חשבון לחיוב, מסחר בשברים, עמלות ומצבי קצה.&#x27;,
+        &#x27;הוראות וביצועים היסטוריים — אפיון מסכי ההוראות, הוראות הקבע, היסטוריית הפעילות, סטטוסים והתראות, תוך יצירת חוויה עקבית עם עולם הקריפטו.&#x27;,
+        &#x27;עמוד מטבע — אפיון עמוד ייעודי לכל מטבע, הכולל נתוני שוק, גרפים, מידע רלוונטי ופעולות מסחר.&#x27;
+      ]},
+      {sub:&#x27;מסכי המוצר — שלב ב׳&#x27;, ul:[
+        &#x27;אונבורדינג — אפיון תהליך ההצטרפות לשירות, בדיקות זכאות, תנאי שימוש, מסרי הסבר וטיפול במקרי קצה.&#x27;,
+        &#x27;סימולטור מס — אפיון חוויית חישוב המס, תרחישי שימוש, אופן ההצגה והשתלבות במערכת (כולל WebView במידת הצורך).&#x27;,
+        &#x27;שווקים — אפיון חוויית גילוי ומעקב אחר מטבעות, כולל רשימות מטבעות, נתוני שוק, חדשות ותוכן תומך לקבלת החלטות.&#x27;
+      ]},
       {ul:[&#x27;לאורך כל הדרך לעדכן את ה-Design System של לאומי טרייד ולשמור על שפה אחידה בין הפרוייקט החדש למערכת הקיימת.&#x27;]}
     ]}
   ]
@@ -522,6 +689,7 @@ const projects = [
   status:&#x27;work&#x27;, owner:&#x27;נורה&#x27;,
   table:{
     scope:&#x27;כל הפרוייקט- 443 שעות. יולי- 100, אוגוסט 36 (ייתכן וישתנה)&#x27;,
+    ticket:&#x27;MEOCAR-1&#x27;,
     design:&#x27;רתם&#x27;,
     notes:&#x27;רתם עצמאי בהתנהלות מולם, צריך לשים דגש על עבודה מול סקופ העבודה (הדר/ קרן)&#x27;
   },
@@ -546,7 +714,7 @@ const projects = [
       ]}
     ]},
     {n:&#x27;04&#x27;, t:&#x27;לוחות זמנים&#x27;, blocks:[
-      {ul:[&#x27;השלב הבא הוא המשך עבודה על עמודי הפנים והעברת התכולות לפיתוח.&#x27;]}
+      {ul:[&#x27;השלב הבא הוא המשך עבודה על עמודי הפנים והעברת התכולות לפיתוח.&#x27;,&#x27;צפי סיום של העבודה: עד סוף יולי (כתלות באישורים ואיטרציות מול הלקוח).&#x27;]}
     ]},
     {n:&#x27;05&#x27;, t:&#x27;תקציב וכספים&#x27;, blocks:[
       {ul:[
@@ -572,19 +740,9 @@ const projects = [
       ]}
     ]},
     {n:&#x27;09&#x27;, t:&#x27;מסכי הפרוייקט&#x27;, blocks:[
-      {ul:[
-        &#x27;עמוד הבית&#x27;,
-        &#x27;עמוד סקטור — רופאים&#x27;,
-        &#x27;עמוד סקטור — אחיות&#x27;,
-        &#x27;עמוד סקטור — מקצועות הרפואה&#x27;,
-        &#x27;עמוד סקטור — מטה ומנהלה&#x27;,
-        &#x27;עמוד סקטור — מתמחים&#x27;,
-        &#x27;עמוד דרושים&#x27;,
-        &#x27;עמוד משרה&#x27;,
-        &#x27;עמוד תוכן&#x27;,
-        &#x27;טופס הגשת מועמדות&#x27;,
-        &#x27;אזור אישי מועמד&#x27;
-      ]}
+      {sub:&#x27;שלב א׳ (צפי סיום בשבוע השלישי של יולי)&#x27;, ul:[&#x27;עמוד הבית&#x27;,&#x27;עמוד סקטור — אחיות&#x27;,&#x27;עמוד דרושים&#x27;,&#x27;עמוד משרה&#x27;,&#x27;עמוד תוכן&#x27;]},
+      {sub:&#x27;שלב ב׳ (צפי סיום בשבוע הרביעי של יולי)&#x27;, ul:[&#x27;עמוד סקטור — רופאים&#x27;,&#x27;עמוד סקטור — מקצועות הרפואה&#x27;,&#x27;עמוד סקטור — מטה ומנהלה&#x27;,&#x27;עמוד סקטור — מתמחים&#x27;,&#x27;טופס הגשת מועמדות&#x27;]},
+      {ul:[&#x27;אזור אישי מועמד — לא קיים כלל.&#x27;]}
     ]}
   ]
 },
@@ -594,6 +752,7 @@ const projects = [
   status:&#x27;work&#x27;, owner:&#x27;נורה&#x27;,
   table:{
     scope:&#x27;30% משרה&#x27;,
+    ticket:&#x27;MEOHEDET-1&#x27;,
     design:&#x27;רתם&#x27;,
     notes:&#x27;רתם עצמאי בהתנהלות מולם&#x27;
   },
@@ -616,9 +775,6 @@ const projects = [
       {ul:[&#x27;דברים שחשוב לדעת לפני שיחה עם הלקוח: הלקוח מרוצה מאוד מההתנהלות מאז שרותם מוביל את הפרוייקט.&#x27;,
       &#x27;בעיות שחוזרות על עצמן / נקודות חיכוך היסטוריות: הפרוייקט עבר מספר ידיים בעבר, אך כיום יציב. חשוב לעקוב אחר היקף העבודה כדי לוודא שלא מתקבלות מעט מדי משימות או עומס חריג, ובמידת הצורך ליזום מול הלקוח. חשוב לדעת שההתנהלות של הצוות שם היא לא קלה והם תמיד מערבים שם הרבה בעלי תפקידים באותה פגישה (באופן לא יעיל)&#x27;]}
     ]},
-    {n:&#x27;07&#x27;, t:&#x27;גישה ומשאבים&#x27;, blocks:[
-      {ul:[&#x27;תיקיית הפרוייקט בפיגמה&#x27;]}
-    ]},
     {n:&#x27;08&#x27;, t:&#x27;טיפים להתנהלות&#x27;, blocks:[
       {ul:[
         &#x27;רותם מתנהל באופן עצמאי מול הלקוח, ולכן חשוב לאפשר לו להמשיך להוביל את העבודה.&#x27;,
@@ -634,6 +790,7 @@ const projects = [
   status:&#x27;work&#x27;, owner:&#x27;נורה&#x27;,
   table:{
     scope:&#x27;כל הפרוייקט 640 שעות. יולי- 111, אוגוסט- 45&#x27;,
+    ticket:&#x27;GOVAC-2&#x27;,
     design:&#x27;יעל ומאי&#x27;,
     notes:&#x27;צריך תקציב נוסף שככל הנראה יהיה מהאסטרטגיה- נדרש לוודא&#x27;
   },
@@ -684,7 +841,7 @@ const projects = [
       ]}
     ]},
     {n:&#x27;07&#x27;, t:&#x27;גישה ומשאבים&#x27;, blocks:[
-      {ul:[&#x27;מסמך סטטוס עבודה (בדגש על סטטוס עיצוב)- [קישור](https://docs.google.com/spreadsheets/d/1y9B9rH4JDGVANydnJUC7BGygoT71ejnY/edit?usp=sharing&amp;ouid=113979249695022400777&amp;rtpof=true&amp;sd=true)&#x27;,&#x27;תיקיית פיגמה- [קישור](https://www.figma.com/files/1175096633018102614/team/1534540242464395021)&#x27;]}
+      {ul:[&#x27;מסמך סטטוס עבודה (בדגש על סטטוס עיצוב)- [קישור](https://docs.google.com/spreadsheets/d/1Yla792Za95BJSB0i9LdjlSWwbx4utI4097JdBDXI178/edit?usp=sharing)&#x27;,&#x27;תיקיית פיגמה- [קישור](https://www.figma.com/files/1175096633018102614/team/1534540242464395021)&#x27;]}
     ]},
     {n:&#x27;08&#x27;, t:&#x27;טיפים להתנהלות&#x27;, blocks:[
       {ul:[
@@ -703,6 +860,7 @@ const projects = [
   status:&#x27;work&#x27;, owner:&#x27;בועז&#x27;,
   table:{
     scope:&#x27;22 שעות לעדכון סטורי בפייבוקס&#x27;,
+    ticket:&#x27;PBX-16&#x27;,
     design:&#x27;יעל&#x27;,
     notes:&#x27;תכלס יעל יודעת להתנהל בזה לבד, צריך לוודא רק מבחינת שעות&#x27;
   },
@@ -741,9 +899,6 @@ const projects = [
         &#x27;דברים שחשוב לדעת לפני שיחה עם הלקוח: העבודה מתנהלת בצורה פשוטה ויעילה – דלית מעבירה בריף, מתבצעת הערכת שעות, ולאחר אישור מתחילים עבודה.&#x27;,
         &#x27;בעיות שחוזרות על עצמן / נקודות חיכוך היסטוריות: בעבר החל תהליך סביב סרטון שיווקי, אך הוא נעצר ואינו רלוונטי כיום.&#x27;
       ]}
-    ]},
-    {n:&#x27;07&#x27;, t:&#x27;גישה ומשאבים&#x27;, blocks:[
-      {ul:[&#x27;תיקיית הפרוייקט בפיגמה&#x27;]}
     ]},
     {n:&#x27;08&#x27;, t:&#x27;טיפים להתנהלות&#x27;, blocks:[
       {sub:&#x27;חשוב להבחין בין שתי זרועות הפעילות&#x27;, ul:[&#x27;PayBox מוצר – מול דלית.&#x27;,&#x27;PayBox שיווקי – מול מורן.&#x27;]},
@@ -789,20 +944,19 @@ const projects = [
     ]},
     {n:&#x27;03&#x27;, t:&#x27;סטטוס נוכחי&#x27;, blocks:[
       {ul:[
-        &#x27;מה בעבודה כרגע: אין תכולת עיצוב משמעותית. העבודה מתמקדת בבקשות נקודתיות שעולות מצד הלקוח, המוצר או צוות הפיתוח. לחודש אוגוסט יתוכנן יום QA אחד.&#x27;,
-        &#x27;מה תקוע, ולמה: בעיקר ניהול לקוח- כרגע לא יושב אצלנו&#x27;
+        &#x27;מה בעבודה כרגע: עבודה נוספת על האיורים ו-QA גרפי. לחודש אוגוסט יתוכנן יום QA אחד.&#x27;
       ]}
     ]},
     {n:&#x27;04&#x27;, t:&#x27;לוחות זמנים&#x27;, blocks:[
       {ul:[
         &#x27;דדליין הכי קרוב: אין דדליין מוגדר.&#x27;,
-        &#x27;אבן הדרך הבאה: מתן מענה לבקשות השוטפות ככל שיעלו.&#x27;,
         &#x27;תאריך סיום משוער של הפרוייקט: הפרוייקט עבר לשלב תחזוקה, ללא תאריך סיום מוגדר.&#x27;
       ]}
     ]},
     {n:&#x27;05&#x27;, t:&#x27;תקציב וכספים&#x27;, blocks:[
       {ul:[
         &#x27;תקציב כולל: התקציב הראשוני היה מצומצם.&#x27;,
+        &#x27;כרגע מאושר: 18 שעות ליולי + 9 שעות לאוגוסט.&#x27;,
         &#x27;התנהלות תקציבית: שלב הפרוייקט המרכזי הסתיים. כיום העבודה מתבצעת לפי תקציב נקודתי עבור בקשות חדשות שעולות מעת לעת.&#x27;
       ]}
     ]},
@@ -827,8 +981,9 @@ const projects = [
   status:&#x27;wait&#x27;, owner:&#x27;בועז&#x27;,
   table:{
     scope:&#x27;135 שעות (אושר 15 ימי עבודה)&#x27;,
+    ticket:&#x27;RID-12&#x27;,
     design:&#x27;יעל&#x27;,
-    notes:&#x27;צפי התנעה באמצע- סוף יולי. לשים לב שיעל יוצאת לחופש בשבועיים הראשונים של אוגוסט&#x27;
+    notes:&#x27;התקיימה פגישת העברת מקל בין חברת המיתוג לזמינגו ב-21.7, ומכאן נדרש לקבוע לוח זמנים עדכני לפרוייקט.&#x27;
   },
   sections:[
     {n:&#x27;01&#x27;, t:&#x27;תקציר&#x27;, pairs:[
@@ -837,19 +992,19 @@ const projects = [
       [&#x27;סטטוס כללי&#x27;,&#x27;הפרוייקט טרם נכנס לשלב העיצוב בפועל. הוא נמצא בהמתנה לקבלת המיתוג מהלקוח, ולאחר קבלתו יתחיל שלב הקונספט העיצובי והטמעתו במסכים.&#x27;]
     ]},
     {n:&#x27;02&#x27;, t:&#x27;אנשי קשר&#x27;, contacts:[
-      {group:&#x27;מטעם הלקוח&#x27;, items:[&#x27;עדי.&#x27;,&#x27;תומר.&#x27;]},
+      {group:&#x27;מטעם הלקוח&#x27;, items:[&#x27;עדי + תומר&#x27;]},
       {group:&#x27;מטעם זמינגו&#x27;, items:[
         &#x27;רוברט – הוביל את המכירה ומלווה את הפרוייקט ברמה האסטרטגית.&#x27;,
         &#x27;יעל – מובילת העיצוב.&#x27;,
         &#x27;גיל – Product ואחראי על כלל האפיון.&#x27;,
         &#x27;עמית – פיתוח.&#x27;,
-        &#x27;גלעד – יועץ AI המלווה את גיבוש מתודולוגיית העבודה החדשה.&#x27;
+        &#x27;גלעד – יועץ AI המלווה את גיבוש מתודולוגיית העבודה החדשה.&#x27;,
+        &#x27;טל – Delivery Manager.&#x27;,
+        &#x27;רתם – עתיד להחליף את יעל במידה ויידרש להתקדם עם הפרוייקט בזמן שהיא בחופש.&#x27;
       ]}
     ]},
     {n:&#x27;03&#x27;, t:&#x27;סטטוס נוכחי&#x27;, blocks:[
-      {sub:&#x27;מה בעבודה כרגע&#x27;, ul:[&#x27;הפרוייקט ממתין לקבלת המיתוג מהלקוח.&#x27;,&#x27;במקביל מתבצע פיתוח של מתודולוגיית עבודה חדשה המבוססת על כלי AI עבור תהליכי העיצוב.&#x27;]},
-      {sub:&#x27;מה תקוע, ולמה&#x27;, ul:[&#x27;הפרוייקט תוכנן להתחיל מוקדם יותר, אך הלקוח הבין שיש צורך בתהליך מיתוג מלא לפני תחילת העבודה.&#x27;,&#x27;המיתוג הועבר לחברה חיצונית, ולכן כל שלב העיצוב ממתין לקבלת השפה המותגית.&#x27;]},
-      {sub:&#x27;החלטות פתוחות שממתינות ללקוח או לצוות&#x27;, ul:[&#x27;קבלת המיתוג מהלקוח.&#x27;,&#x27;התנעת שלב הקונספט מיד לאחר קבלת החומרים.&#x27;]}
+      {ul:[&#x27;מה בעבודה כרגע: קבלת חומרי המיתוג ותחילת התנעת שלב העיצוב בפרוייקט.&#x27;]}
     ]},
     {n:&#x27;04&#x27;, t:&#x27;לוחות זמנים&#x27;, blocks:[
       {ul:[
@@ -876,6 +1031,9 @@ const projects = [
         &#x27;הפרוייקט משמש כפיילוט למתודולוגיות עבודה חדשות, ולכן ייתכנו התאמות ושינויים תוך כדי תנועה.&#x27;
       ]}
     ]},
+    {n:&#x27;07&#x27;, t:&#x27;גישה ומשאבים&#x27;, blocks:[
+      {ul:[&#x27;תיקיית הפרוייקט בדרייב: [קישור](https://drive.google.com/drive/folders/1AgxqVk_Yruqa5ueKVUg2z55vU-qAXf93?usp=drive_link)&#x27;]}
+    ]},
     {n:&#x27;08&#x27;, t:&#x27;טיפים להתנהלות&#x27;, blocks:[
       {ul:[
         &#x27;מדובר בפרוייקט אסטרטגי עבור זמינגו, לא רק מול הלקוח אלא גם לצורך גיבוש מתודולוגיות עבודה חדשות בתחום ה-AI.&#x27;,
@@ -893,6 +1051,7 @@ const projects = [
   status:&#x27;wait&#x27;, owner:&#x27;בועז&#x27;,
   table:{
     scope:&#x27;יש 2 בנקי שעות מאושרים- 97 +68&#x27;,
+    ticket:&#x27;MG-6&#x27;,
     design:&#x27;מאי וליטל&#x27;,
     notes:&#x27;צפי המשך עבודה רק באוגוסט&#x27;
   },
@@ -963,36 +1122,11 @@ const projects = [
     notes:&#x27;כבר חודשים שהפרוייקט רדום מאז שעדי ר סיימה, מאי קיבלה בריף עליו&#x27;
   },
   sections:[
-    {n:&#x27;01&#x27;, t:&#x27;תקציר&#x27;, blocks:[
-      {pairsInline:[[&#x27;לקוח&#x27;,&#x27;סופר פארם&#x27;]]},
-      {sub:&#x27;מטרת הפרוייקט: ליווי ואפיון שתי מערכות פנימיות של סופר פארם&#x27;, ul:[
-        &#x27;Picksys – מערכת לניהול וליקוט הזמנות בסניפים.&#x27;,
-        &#x27;SPA – מערכת לניהול כוח אדם, שעות עבודה, תקנים וחריגים של דיילות וספקים.&#x27;
-      ]},
-      {pairsInline:[[&#x27;סטטוס כללי&#x27;,&#x27;הפרוייקט אינו פעיל כרגע, אך חשוב להכיר את המבנה שלו מכיוון שמדי פעם עולות בקשות נקודתיות מהלקוח.&#x27;]]}
-    ]},
-    {n:&#x27;02&#x27;, t:&#x27;אנשי קשר&#x27;, contacts:[
-      {group:&#x27;מטעם הלקוח&#x27;, items:[&#x27;יסמין – מנהלת המוצר ואשת הקשר המרכזית.&#x27;,&#x27;בעבר: מיכל מרגוליס – מנהלת המוצר.&#x27;]},
-      {group:&#x27;מטעם זמינגו&#x27;, items:[&#x27;צוות הפיתוח.&#x27;,&#x27;אורטל – Delivery.&#x27;]}
-    ]},
-    {n:&#x27;03&#x27;, t:&#x27;סטטוס נוכחי&#x27;, blocks:[
+    {n:&#x27;01&#x27;, t:&#x27;גישה ומשאבים&#x27;, blocks:[
       {ul:[
-        &#x27;מה בעבודה כרגע: אין עבודה פעילה.&#x27;,
-        &#x27;החלטות פתוחות שממתינות ללקוח או לצוות: לעיתים יסמין מעבירה משימות נקודתיות. בשתי הפעמים האחרונות המשימות לא הבשילו לעבודה בפועל, אך רוכזו בקובץ ייעודי שניתן להמשיך לעבוד ממנו בעת הצורך.&#x27;
-      ]}
-    ]},
-    {n:&#x27;04&#x27;, t:&#x27;לוחות זמנים&#x27;, blocks:[
-      {ul:[&#x27;דדליין הכי קרוב: אין.&#x27;,&#x27;אבן הדרך הבאה: אם תגיע בקשה חדשה – ממשיכים מהקבצים הקיימים.&#x27;]}
-    ]},
-    {n:&#x27;05&#x27;, t:&#x27;תקציב וכספים&#x27;, blocks:[
-      {ul:[&#x27;תקציב כולל: אישור פרטני של שעות מול אורטל בהתאם להערכת השעות של המעצבת&#x27;]}
-    ]},
-    {n:&#x27;07&#x27;, t:&#x27;גישה ומשאבים&#x27;, blocks:[
-      {ul:[
-        &#x27;Picksys – Dev Ready: קיים קובץ Dev Ready הכולל את כל מסכי המערכת. חשוב תמיד לעבוד על המסך העדכני ביותר שמופיע בראש העמוד ולא לעדכן רטרואקטיבית את כלל המסכים.&#x27;,
-        &#x27;SPA – Dev Ready: הקובץ מחולק לפי ספרינטים ולא לפי עמודים, ולכן יש לאתר את המסכים לפי מספר הספרינט והכותרות.&#x27;,
-        &#x27;Style Guide: קיים סטייל גייד הכולל גם רכיבי מערכת. הוא אינו Design System מתעדכן, אך ברוב המקרים ניתן למצוא בו את כל הרכיבים הנדרשים.&#x27;,
-        &#x27;אם הפרוייקט יחזור לפעילות, מומלץ לעבור על מסמך החפיפה ועל מצגת ההעברה לפני תחילת העבודה, שכן הם מרכזים את כל הידע שנצבר בפרוייקט.&#x27;
+        &#x27;מצגת העברת מקל: [קישור](https://docs.google.com/presentation/d/152paQULtl7rwDJ02byLjO4bKClXS4mud9Q3z9muDNvE/edit?usp=sharing)&#x27;,
+        &#x27;Picksys — פיגמה: [קישור](https://www.figma.com/design/SgcXmgakVBT5htd2U6c0xQ/Picksys---Dev-Ready?node-id=775-10333&amp;p=f&amp;t=4u5uyExM3m6DdDzG-0)&#x27;,
+        &#x27;SPA — פיגמה: [קישור](https://www.figma.com/design/83oSliHpiDXJdWGPkzAxw5/SPA---Dev-Ready?node-id=9537-35260&amp;p=f&amp;t=nKCsREl07HK7NMQK-0)&#x27;
       ]}
     ]}
   ]
@@ -1110,6 +1244,7 @@ function render(){
         &lt;div class=&quot;exRow&quot;&gt;&lt;span class=&quot;k&quot;&gt;אחריות ניהולית&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;${esc(p.owner)}&lt;/span&gt;&lt;/div&gt;
         &lt;div class=&quot;exRow&quot;&gt;&lt;span class=&quot;k&quot;&gt;צוות עיצוב&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;${esc(p.table.design||&#x27;—&#x27;)}&lt;/span&gt;&lt;/div&gt;
         &lt;div class=&quot;exRow&quot;&gt;&lt;span class=&quot;k&quot;&gt;נוספים&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;${esc(p.table.notes||&#x27;—&#x27;)}&lt;/span&gt;&lt;/div&gt;
+        ${p.table.ticket?`&lt;div class=&quot;exRow&quot;&gt;&lt;span class=&quot;k&quot;&gt;טיקט דיווח שעות&lt;/span&gt;&lt;span class=&quot;v&quot;&gt;&lt;span class=&quot;ticketPill&quot;&gt;${esc(p.table.ticket)}&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;`:&#x27;&#x27;}
       &lt;/div&gt;
     `;
     grid.appendChild(card);
@@ -1139,10 +1274,11 @@ function openDetail(id){
       &lt;div class=&quot;sCell&quot;&gt;&lt;div class=&quot;sk&quot;&gt;אחריות ניהולית&lt;/div&gt;&lt;div class=&quot;sv&quot;&gt;${esc(p.owner)}&lt;/div&gt;&lt;/div&gt;
       &lt;div class=&quot;sCell&quot;&gt;&lt;div class=&quot;sk&quot;&gt;צוות עיצוב&lt;/div&gt;&lt;div class=&quot;sv&quot;&gt;${esc(p.table.design||&#x27;—&#x27;)}&lt;/div&gt;&lt;/div&gt;
       &lt;div class=&quot;sCell&quot;&gt;&lt;div class=&quot;sk&quot;&gt;נוספים&lt;/div&gt;&lt;div class=&quot;sv&quot;&gt;${esc(p.table.notes||&#x27;—&#x27;)}&lt;/div&gt;&lt;/div&gt;
+      ${p.table.ticket?`&lt;div class=&quot;sCell&quot;&gt;&lt;div class=&quot;sk&quot;&gt;טיקט דיווח שעות&lt;/div&gt;&lt;div class=&quot;sv&quot;&gt;&lt;span class=&quot;ticketPill&quot;&gt;${esc(p.table.ticket)}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;`:&#x27;&#x27;}
     &lt;/div&gt;
   `;
-  p.sections.forEach(sec=&gt;{
-    html += `&lt;div class=&quot;section&quot;&gt;&lt;div class=&quot;ghostNum&quot;&gt;${sec.n}&lt;/div&gt;&lt;div class=&quot;secTitle&quot;&gt;${esc(sec.t)}&lt;/div&gt;&lt;div class=&quot;panel&quot;&gt;`;
+  p.sections.forEach((sec,i)=&gt;{
+    html += `&lt;div class=&quot;section&quot;&gt;&lt;div class=&quot;ghostNum&quot;&gt;${(&#x27;0&#x27;+(i+1)).slice(-2)}&lt;/div&gt;&lt;div class=&quot;secTitle&quot;&gt;${esc(sec.t)}&lt;/div&gt;&lt;div class=&quot;panel&quot;&gt;`;
     if(sec.pairs){
       sec.pairs.forEach(pr=&gt;{ html += `&lt;div class=&quot;pair&quot;&gt;&lt;span class=&quot;pk&quot;&gt;${esc(pr[0])}:&lt;/span&gt;&lt;span&gt;${linkify(pr[1])}&lt;/span&gt;&lt;/div&gt;`; });
     }
@@ -1178,10 +1314,14 @@ function openDetail(id){
   body.innerHTML = html;
   document.body.classList.add(&#x27;detailOpen&#x27;);
   window.scrollTo({top:0,behavior:&#x27;instant&#x27;});
+  try{ window.parent &amp;&amp; window.parent!==window &amp;&amp; window.parent.projDetailChanged &amp;&amp; window.parent.projDetailChanged(true); }catch(e){}
+  setActiveTab(id);
 }
 function closeDetail(){
   document.body.classList.remove(&#x27;detailOpen&#x27;);
   window.scrollTo({top:0,behavior:&#x27;instant&#x27;});
+  try{ window.parent &amp;&amp; window.parent!==window &amp;&amp; window.parent.projDetailChanged &amp;&amp; window.parent.projDetailChanged(false); }catch(e){}
+  setActiveTab(&#x27;all&#x27;);
 }
 
 /* ============ HELPERS ============ */
@@ -1192,8 +1332,30 @@ function linkify(s){
     (m,label,url)=&gt;`&lt;a class=&quot;lnk&quot; href=&quot;${url}&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;${label}&lt;/a&gt;`);
 }
 
+function buildProjTabs(){
+  var nav=document.getElementById(&#x27;projTabs&#x27;); if(!nav) return;
+  var all=document.createElement(&#x27;button&#x27;); all.className=&#x27;projTab&#x27;; all.setAttribute(&#x27;data-id&#x27;,&#x27;all&#x27;);
+  all.innerHTML=&#x27;&lt;span&gt;כל הפרוייקטים&lt;/span&gt;&#x27;;
+  all.addEventListener(&#x27;click&#x27;, function(){ closeDetail(); });
+  nav.appendChild(all);
+  projects.forEach(function(p){
+    var b=document.createElement(&#x27;button&#x27;); b.className=&#x27;projTab&#x27;; b.setAttribute(&#x27;data-id&#x27;,p.id);
+    b.innerHTML=logoMarkup(p,18)+&#x27;&lt;span&gt;&#x27;+esc(p.name)+&#x27;&lt;/span&gt;&#x27;;
+    b.addEventListener(&#x27;click&#x27;, function(){ openDetail(p.id); });
+    nav.appendChild(b);
+  });
+}
+function setActiveTab(id){
+  var nav=document.getElementById(&#x27;projTabs&#x27;); if(!nav) return;
+  Array.prototype.forEach.call(nav.children, function(b){
+    b.classList.toggle(&#x27;active&#x27;, b.getAttribute(&#x27;data-id&#x27;)===id);
+  });
+}
+if(window.self!==window.top){ document.body.classList.add(&#x27;framed&#x27;); }
 buildFilters();
+buildProjTabs();
 render();
+setActiveTab(&#x27;all&#x27;);
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -1203,8 +1365,15 @@ render();
 <!-- ==================== EMPLOYEES ==================== -->
 <section id="view-employees" class="view frame">
   <div class="chrome">
-    <a class="ch-home" href="#home">● דף הבית</a>
-    <a class="ch-switch" href="#projects">מעבר לפרוייקטים ←</a>
+    <div class="chNav">
+      <a class="ch-home" href="#home">● דף הבית <span class="chCaret">▾</span></a>
+      <div class="chMenu" role="menu">
+        <a href="#home" data-view="home">דף הבית</a>
+        <a href="#projects" data-view="projects">פרוייקטים</a>
+        <a href="#employees" data-view="employees">צוות</a>
+        <a href="#august" data-view="august">תכנון אוגוסט</a>
+      </div>
+    </div>
   </div>
   <iframe title="צוות" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;he&quot; dir=&quot;rtl&quot;&gt;
@@ -1690,6 +1859,10 @@ nav.tabs{border-bottom:none;border-radius:20px;padding:6px;gap:4px;top:12px;marg
 .gate-btn:hover{background:var(--sunDeep);transform:translateY(-1px);box-shadow:0 6px 16px rgba(232,217,64,.55)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 
+
+  .sub-head{font-size:15px; font-weight:500; margin:26px 0 12px;}
+  .sub-head .snum{color:var(--mute); font-weight:400; font-variant-numeric:tabular-nums; margin-inline-end:6px;}
+  .chart-wrap{margin-top:6px;}
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -1728,211 +1901,226 @@ const employees = [
 {
   id:&#x27;yael&#x27;, num:&#x27;01&#x27;, name:&#x27;יעל&#x27;, team:&#x27;בועז&#x27;,
   tenure:`ותק בזמינגו- שנתיים וחצי, מעצבת מובילה`,
-  clients:`לקוחות עיקריים- לאומי עסקים (אתר+ אפליקציה), לאומי טרייד (טפסי מסחר), פייבוקס, גוב, רידמן`,
-  chart:{
-    note:null,
-    title:`יעל | ציונים לפי קריטריון`,
-    items:[
-      {label:`מבצע/ת עבודה איכותית ויעילה`, value:9},
-      {label:`פתוח/ה לקבל משוב`, value:8},
-      {label:`לוקח/ת אחריות`, value:9},
-      {label:`חותר/ת למצוינות`, value:9},
-      {label:`עמידה בתפוקות, זמנים ואיכות`, value:8},
-      {label:`שיתוף פעולה מול יחידות אחרות`, value:8},
-      {label:`התנהגות אמינה והוגנת`, value:8},
-      {label:`עבודת צוות ושיתוף ידע`, value:7, highlight:true},
-      {label:`התמודדות עם שינויים`, value:9},
-      {label:`מעלה רעיונות ופתרונות יצירתיים`, value:8},
-      {label:`תודעת שירות`, value:8},
-      {label:`מתעדכן/ת ולומד/ת`, value:9}
-    ]
-  },
+  clients:`לקוחות עיקריים- לאומי עסקים (אתר+אפליקציה), לאומי טרייד (טפסי מסחר), פייבוקס, Gov, רידמן`,
   sections:[
-    {type:&#x27;text&#x27;, num:&#x27;01&#x27;, title:&#x27;תמונת מצב&#x27;, paragraphs:[
-      `שנת 2026 הייתה עבור יעל שנת התרחבות והתבססות מקצועית, בה הובילה משמעותית בפרוייקטים כמו לאומי עסקים אתר ואפליקציה ופייבוקס. היא בלטה בסדר וארגון, יסודיות וסגירת משימות מקצה לקצה, תקשורת בין-אישית נעימה ושותפות ואמון עם הצוות. לצד זאת הוגדרו לה כמה כיווני התפתחות: מעבר מתפקיד ביצועי לתפקיד ניהולי-מוביל יותר, פיתוח יוזמה וסקרנות, וחידוד היכולת לתת פידבקים ממוקדים.`
+    {num:&#x27;01&#x27;, title:&#x27;סיכום משובים קודמים&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+      `שנת 2025 הייתה עבור יעל שנת התרחבות והתבססות מקצועית, שבה הובילה משמעותית בפרויקטים כמו לאומי עסקים אתר ואפליקציה ופייבוקס. היא בלטה בסדר וארגון, יסודיות וסגירת משימות מקצה לקצה, תקשורת בין-אישית נעימה ושותפות ואמון עם הצוות. הכיוונים שהוגדרו לשיפור: מעבר מתפקיד ביצועי לתפקיד ניהולי-מוביל יותר, פיתוח יוזמה וסקרנות, וחידוד היכולת לתת פידבקים ממוקדים. (משוב קודם 08/01/2026 · 2 מתוך 4 יעדים הושגו במלואם או בכיוון אחר.)`
+    ]}},
+    {num:&#x27;02&#x27;, title:&#x27;משוב יולי 2026&#x27;, subs:[
+      {num:&#x27;2.1&#x27;, title:&#x27;ציונים לפי קריטריון&#x27;, body:{type:&#x27;chart&#x27;, note:null, items:[
+        {label:`מבצע/ת עבודה איכותית ויעילה`, value:9},
+        {label:`פתוח/ה לקבל משוב`, value:8},
+        {label:`לוקח/ת אחריות`, value:8},
+        {label:`חותר/ת למצוינות`, value:8},
+        {label:`עמידה בתפוקות, זמנים ואיכות`, value:8},
+        {label:`שיתוף פעולה מול יחידות אחרות`, value:7},
+        {label:`התנהגות אמינה והוגנת`, value:8},
+        {label:`עבודת צוות ושיתוף ידע`, value:7, highlight:true},
+        {label:`התמודדות עם שינויים`, value:8},
+        {label:`מעלה רעיונות ופתרונות יצירתיים`, value:8},
+        {label:`תודעת שירות`, value:8},
+        {label:`מתעדכן/ת ולומד/ת`, value:9},
+        {label:`הערכה כוללת`, value:8}
+      ]}},
+      {num:&#x27;2.2&#x27;, title:&#x27;טבלת סיכום — נקודות שימור, שיפור ויעדים&#x27;, body:{type:&#x27;goals3&#x27;, headers:[`נושאים בולטים לחיוב`,`נקודות שיפור`,`יעדים לשנה הקרובה`], columns:[
+        [`הובלה עצמאית של משימות ותהליכים מורכבים`,`מצוינות מקצועית ואיכות ביצוע גבוהה ועקבית`,`הטמעת מתודולוגיות AI חדשות בעבודה`],
+        [`חיזוק אסרטיביות מקצועית - פער שחוזר שנה שנייה ברציפות`,`שיתוף ידע יזום עם הצוות, לא רק בתוך הפרוייקטים שלה`,`ראייה מערכתית רחבה יותר, מעבר למשימה הבודדת`],
+        [`הובלת מתודולוגיית AI בסטודיו - ממחקר ועד עיצוב סופי`,`בניית מומחיות מקצועית (Professional Authority) בתחום מוגדר`,`חיזוק יכולות ניהוליות - מהובלת משימות להובלת תחומים שלמים`]
+      ]}}
     ]},
-    {type:&#x27;goals3&#x27;, headers:[`נושאים בולטים לחיוב`,`נקודות שיפור`,`יעדים לשנה הקרובה`], columns:[
-      [`הובלה עצמאית של משימות ותהליכים מורכבים`,`מצוינות מקצועית ואיכות ביצוע גבוהה ועקבית`,`הטמעת מתודולוגיות AI חדשות בעבודה`,`שותפות ואמון, תקשורת בין-אישית נעימה`],
-      [`חיזוק אסרטיביות מקצועית - פער שחוזר שנה שנייה ברציפות`,`שיתוף ידע יזום עם הצוות, לא רק בתוך הפרוייקטים שלה`,`ראייה מערכתית רחבה יותר, מעבר למשימה הבודדת`],
-      [`הובלת מתודולוגיית AI בסטודיו - ממחקר ועד עיצוב סופי`,`בניית מומחיות מקצועית (Professional Authority) בתחום מוגדר`,`חיזוק יכולות ניהוליות - מהובלת משימות להובלת תחומים שלמים`]
+    {num:&#x27;03&#x27;, title:&#x27;טיפים לניהול ועבודה משותפת&#x27;, subs:[
+      {num:&#x27;3.1&#x27;, title:&#x27;סגנון עבודה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `יעל מפגינה רמת ביצוע גבוהה מאוד באופן עקבי. במהלך השנה הובילה תכולות משמעותיות בפרוייקטים מרכזיים, בהם לאומי טרייד, Gov ותהליך ה-AI בפרוייקט רידמן. התוצרים שהיא מגישה מאופיינים באיכות גבוהה, חשיבה אפיונית מעמיקה ודיוק עיצובי. לצד זאת היא מנהלת את עבודתה בצורה מסודרת, מעריכה לוחות זמנים באופן מציאותי, מציפה חסמים מבעוד מועד ומצליחה לעמוד ביעדים גם כאשר הפרוייקטים מורכבים ודינמיים.`
+      ]}},
+      {num:&#x27;3.2&#x27;, title:&#x27;לתשומת לב המנהל.ת&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `בעלות מלאה על תחום או פרוייקט משמעותי — זה בדיוק מה שהוציא ממנה את הביצועים הגבוהים ביותר (בפרוייקטי Gov ולאומי טרייד).`,
+        `קואצ&#x27;ינג ישיר אך מכבד, עם דגש חזק על כך שמותר וראוי לקחת עמדה מקצועית ברורה. מכיוון שהנושא חזר פעמיים ברציפות ללא שינוי, מומלץ לשנות גישה — למשל תרגול מצבי מחלוקת בפועל ולא רק שיחה עליהם.`
+      ]}},
+      {num:&#x27;3.3&#x27;, title:&#x27;מומלץ להימנע&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `להניח שהיא &#x27;תמיד תסתדר לבד&#x27; — דווקא בגלל שהיא כל כך עצמאית, קל לפספס שהיא צריכה דחיפה חיצונית באסרטיביות ובשיתוף ידע.`
+      ]}},
+      {num:&#x27;3.4&#x27;, title:&#x27;חשוב לדחוף להנעה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `לבקש ממנה במפורש להביע עמדה נחרצת יותר ולשתף ידע ביוזמה — שני אלה לא יקרו מעצמם, כי הם נוגדים במידה מסוימת את הסטייל הנעים והמכבד הטבעי שלה.`
+      ]}}
     ]},
-    {type:&#x27;text&#x27;, num:&#x27;03&#x27;, title:&#x27;סגנון עבודה&#x27;, paragraphs:[
-      `יעל מפגינה רמת ביצוע גבוהה מאוד באופן עקבי. במהלך השנה הובילה תכולות משמעותיות בפרוייקטים מרכזיים, בהם לאומי טרייד, Gov ותהליך ה-AI בפרוייקט רידמן. התוצרים שהיא מגישה מאופיינים באיכות גבוהה, חשיבה אפיונית מעמיקה ודיוק עיצובי. לצד זאת היא מנהלת את עבודתה בצורה מסודרת, מעריכה לוחות זמנים באופן מציאותי, מציפה חסמים מבעוד מועד ומצליחה לעמוד ביעדים גם כאשר הפרוייקטים מורכבים ודינמיים.`
-    ]},
-    {type:&#x27;guide&#x27;, num:&#x27;04&#x27;, title:&#x27;מדריך ניהול&#x27;, items:[
-      {label:`מה עובד`, text:`לתת לה בעלות מלאה על תחום או פרוייקט משמעותי - זה בדיוק מה שהוציא ממנה את הביצועים הגבוהים ביותר, בפרוייקטי Gov ולאומי טרייד.`},
-      {label:`מה חשוב לדחוף`, text:`לבקש ממנה במפורש להביע עמדה נחרצת יותר ולשתף ידע ביוזמה - שני אלה לא יקרו מעצמם, כי הם נוגדים במידה מסוימת את הסטייל הטבעי הנעים והמכבד שלה.`},
-      {label:`קואצ&#x27;ינג מומלץ`, text:`ישיר אך מכבד, עם דגש חזק על כך שמותר וראוי לקחת עמדה ברורה. מכיוון שהנושא חזר פעמיים ברציפות בלי שינוי, מומלץ לשנות גישה - למשל תרגול מצבי מחלוקת בפועל, ולא רק שיחה עליהם במסגרת משוב.`},
-      {label:`ממה להימנע`, text:`להניח שהיא &#x27;תמיד תסתדר לבד&#x27; - בדיוק בגלל שהיא כל כך עצמאית, קל לפספס שהיא צריכה דחיפה חיצונית באסרטיביות ובשיתוף ידע.`}
-    ]},
-    {type:&#x27;text&#x27;, num:&#x27;05&#x27;, title:&#x27;פיתוח קריירה&#x27;, paragraphs:[
-      `יעל שואפת להתנסות בכמה שיותר התנסויות ניהוליות. סיכמנו שבתור התחלה היא תקבל אחריות על תוכנית ההתמחויות ועל ההובלה של לאומי טרייד. אני ממליצה להמשיך לדחוף את זה גם אל מול אסף כי יש לה הרבה יכולות ויש לה הרבה מה לתרום לזמינגו מעבר ליכולות המקצועיות שלה כמעצבת`
-    ]},
-    {type:&#x27;logistics&#x27;, num:&#x27;06&#x27;, title:&#x27;נקודות לוגיסטיות&#x27;, bullets:[
-      `היא מתחילה לעבוד מוקדם ויוצאת מוקדם, צריך לשים לב שזה לא מוקדם מידי ושהיא לא משחקת עם זה יותר מידי. אני עשיתי לה שיחה על זה לפני חצי שנה שהיא צריכה לשים לב לגמישות בשעות ולתת מענה ללקוחות גם אחרי השעה 15:00. היא הבינה וקיבלה, אבל אני מרגישה שזה חוזר על עצמו שוב עכשיו`,
-      `באופן כללי מסוכם שהיא תעבוד 8 שעות ולא 9 (מול אסף)`,
-      `חופשי חגים- אני ממליצה לשים לב לזה לפני ותכנן איתה את זה (תמיד יש לה חוסר של ימים ומאושר מול אסף להיות גמישים איתה מבחינת החל&quot;ת)`,
+    {num:&#x27;04&#x27;, title:&#x27;פיתוח קריירה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+      `יעל שואפת להתנסות בכמה שיותר התנסויות ניהוליות. סוכם שכהתחלה תקבל אחריות על תוכנית ההתמחויות ועל ההובלה של לאומי טרייד. מומלץ להמשיך לדחוף את זה גם מול אסף — יש לה הרבה יכולות והרבה מה לתרום לזמינגו מעבר ליכולות המקצועיות שלה כמעצבת.`
+    ]}},
+    {num:&#x27;05&#x27;, title:&#x27;נקודות לוגיסטיות&#x27;, body:{type:&#x27;logistics&#x27;, bullets:[
+      `מתחילה לעבוד מוקדם ויוצאת מוקדם — צריך לשים לב שזה לא מוקדם מדי ושהיא לא &quot;משחקת&quot; עם זה יותר מדי. לפני חצי שנה קיימנו שיחה על גמישות בשעות ומתן מענה ללקוחות גם אחרי 15:00; היא קיבלה, אבל התחושה היא שזה חוזר על עצמו עכשיו.`,
+      `סוכם שתעבוד 8 שעות ולא 9 (מול אסף).`,
+      `חופשי חגים — מומלץ לתכנן איתה מראש (תמיד יש לה חוסר של ימים, ומאושר מול אסף להיות גמישים איתה מבחינת החל&quot;ת).`,
       {text:`חופשים מתוכננים-`, sub:[`02.08–13.08 חל&quot;ת`,`סוכות 25.09–03.10`]}
-    ]}
+    ]}}
   ]
 },
 {
   id:&#x27;may&#x27;, num:&#x27;02&#x27;, name:&#x27;מאי&#x27;, team:&#x27;בועז&#x27;,
   tenure:`ותק בזמינגו- כחודשיים`,
   clients:`לקוחות עיקריים- Leumi Trade, mygov, מנורה`,
-  chart:null,
   sections:[
-    {type:&#x27;text&#x27;, num:&#x27;01&#x27;, title:&#x27;תמונת מצב&#x27;, paragraphs:[
-      `מאי השתלבה בצורה טובה בצוות ומפגינה גישה חיובית ללמידה. היא לוקחת אחריות על המשימות שלה, פתוחה מאוד לקבלת פידבק ומגלה רצון אמיתי להשתפר. היא שירותית, נעימה לעבודה ומייצרת שיתוף פעולה טוב עם הסביבה. יחד עם זאת, עדיין יש מספר תחומים משמעותיים שכדאי להמשיך לפתח כדי להגיע לרמת עצמאות גבוהה יותר.`
+    {num:&#x27;01&#x27;, title:&#x27;סיכום משובים קודמים&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+      `מאי השתלבה בצורה טובה בצוות ומפגינה גישה חיובית ללמידה. היא לוקחת אחריות על המשימות שלה, פתוחה מאוד לקבלת פידבק ומגלה רצון אמיתי להשתפר, שירותית ונעימה לעבודה ומייצרת שיתוף פעולה טוב עם הסביבה. תחומים שהוגדרו לפיתוח: אחריות וניהול משימות במקביל, איכות התוצרים בסבב הראשון, חשיבה מקצועית וביקורתית, ומעבר משימוש בכלי AI ליוזמה.`,
+      `הערה: זהו קו בסיס (Baseline) — מאי בתחילת דרכה בסטודיו, ואין לפניו מחזור משוב קודם להשוואה, ולכן טרם נמדדו &#x27;שיפור&#x27; או &#x27;החמרה&#x27;.`
+    ]}},
+    {num:&#x27;02&#x27;, title:&#x27;סיכום שיחת אונבורדינג&#x27;, subs:[
+      {num:&#x27;2.1&#x27;, title:&#x27;ציפיות הליבה&#x27;, body:{type:&#x27;list&#x27;, items:[
+        `&lt;b&gt;חיזוק יכולות ה-UX והבאת פתרונות טרנדיים ופונקציונליים&lt;/b&gt; — לפצח בעיות מורכבות דרך עיני המשתמש: לחזק ולשכלל באופן מתמיד את שריר האפיון וחוויית המשתמש (UX), ולהציע פתרונות יצירתיים וטרנדיים בשוק וגם פונקציונליים, ישימים וממוקדי משתמש (וכמובן ישימים מול אילוצי הפיתוח).`,
+        `&lt;b&gt;איזון בין קריאייטיב לאילוצי פרויקט&lt;/b&gt; — פיצוח הבעיה בתוך מגבלות התקציב ולוחות הזמנים של הלקוח ושל Zemingo. חשיבה יצירתית ומחוץ לקופסה מבורכת, כל עוד היא משרתת את ה-Scope המוגדר למשימה.`,
+        `&lt;b&gt;עבודת צוות וסיעור מוחות (Collaboration)&lt;/b&gt; — השתתפות אקטיבית בסיעורי מוחות, שיתוף חומרי עבודה בשלבים מוקדמים (Work in Progress), ובקשת פידבק מעמיתים לסטודיו.`,
+        `&lt;b&gt;עבודה שוטפת עם AI&lt;/b&gt; — שימוש מוגבר ופרואקטיבי בכלי AI בעיצוב, במטרה לקצר זמני עבודה, לייצר חומרים לבדיקה מהירה ולפנות זמן לחשיבה על לוגיקת ה-UX.`,
+        `&lt;b&gt;ניהול זמן ופרואקטיביות&lt;/b&gt; — תכנון זמנים קפדני בהתאם לתעדופי הלקוח, הצפת חסמים או עומסים מראש (ולא ברגע האחרון), וניהול המשימות כך שאף פרויקט לא ייפגע.`
+      ]}},
+      {num:&#x27;2.2&#x27;, title:&#x27;כיצד תימדד ההצלחה (3 חודשים)&#x27;, body:{type:&#x27;list&#x27;, lead:`ההצלחה בתקופת הקליטה (3 חודשים) תימדד על בסיס שלושת המדדים הבאים:`, items:[
+        `&lt;b&gt;איכות ומקצועיות הביצוע (UI/UX &amp; Reliability)&lt;/b&gt; — אספקת תוצרים ברמת פיקסל-פרפקט בסטנדרט הנדרש, תוך שליטה מהירה בפרויקטים (בדגש על לאומי טרייד ומיי גוב) וב-Design System שלהם; שילוב פתרונות UX פונקציונליים ויצירתיים המראים חשיבה עצמאית על חוויית המשתמש, לצד שילוב מעשי, מוכח ופרואקטיבי של כלי AI בשגרת העבודה לקיצור זמני הפקה (Execution).`,
+        `&lt;b&gt;יעילות ועצמאות בניהול משימות&lt;/b&gt; — מעבר חלק ועבודה סימולטנית על לפחות שני פרויקטים במקביל, תוך עמידה מלאה בכל לוחות הזמנים (Deliverables) ללא ירידה באיכות או עיכובים מעומס; מצופה להגיע לרמת עצמאות גבוהה המאפשרת להוביל משימות ופרויקטים.`,
+        `&lt;b&gt;שירותיות, גמישות ופתיחות מקצועית (Coachability &amp; Client Orientation)&lt;/b&gt; — תודעת שירות גבוהה מול לקוחות לצד קבלה ויישום מהיר של פידבק ממובילי הפרויקטים; הקשבה לצרכים משתנים, גמישות, ואיזון חכם בין תפיסות מקצועיות וטרנדים לבין אילוצי ה-Scope (לו&quot;ז ותקציב) של הלקוח והסטודיו.`
+      ]}}
     ]},
-    {type:&#x27;goals3&#x27;, headers:[`נושאים בולטים לחיוב`,`נקודות שיפור`,`יעדים לשנה הקרובה`], columns:[
-      [`לוקחת אחריות אישית ומוסר עבודה גבוה`,`פתוחה מאוד לקבלת משוב ולמידה מתמשכת`,`שירותית ונעימה, משתלבת היטב בצוות`],
-      [`הערכת זמנים ותיעדוף מדויקים יותר`,`איכות התוצרים כבר בסבב הראשון`,`חשיבה ביקורתית והבעת עמדה מקצועית`],
-      [`UI/UX Skills with AI Workflow`,`Multitasking &amp; Ownership - ניהול מספר משימות במקביל`,`Client Focus - פוקוס לקוח`]
+    {num:&#x27;03&#x27;, title:&#x27;טיפים לניהול ועבודה משותפת&#x27;, subs:[
+      {num:&#x27;3.1&#x27;, title:&#x27;סגנון עבודה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `עובדת כרגע באופן תלוי-הכוונה ונשארת באזור הנוחות שלה - לא תמיד מעלה דגל כשמתפנה לה זמן ולא יוזמת לקיחת משימות נוספות. סביר שהמגמה תשתנה עם צבירת ביטחון וניסיון בסטודיו.`
+      ]}},
+      {num:&#x27;3.2&#x27;, title:&#x27;לתשומת לב המנהל.ת&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `אתגור הדרגתי — הוספת אחריות ומשימות במקביל ועידוד יוזמה, בשילוב עם משוב ישיר, תדיר וממוקד שהיא קולטת טוב ושמספק הזדמנות לתרגול בפועל.`,
+        `היא קצת מתפזרת בפוקוס (הרבה טלפון ועיסוקים אישיים במהלך היום). התחלתי לעבוד איתה על שיטת עבודה כדי שתיקח אחריות על המשימות שתחתיה.`
+      ]}},
+      {num:&#x27;3.3&#x27;, title:&#x27;מומלץ להימנע&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `להשאיר אותה יותר מדי זמן ב&#x27;אזור הנוחות&#x27; בלי דחיפה עדינה, ולתת לה יותר מדי חופש בלי מסגרת — הנטייה הטבעית שלה היא להמתין שיחלקו לה עבודה, והיא עדיין לא מבקשת עומס בעצמה.`
+      ]}},
+      {num:&#x27;3.4&#x27;, title:&#x27;חשוב לדחוף להנעה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `לעודד פרואקטיביות — שתעלה דגל כשמתפנה לה זמן, תיזום לקיחת משימות נוספות ותסגור מעגלים על המשימות שתחתיה.`
+      ]}}
     ]},
-    {type:&#x27;text&#x27;, num:&#x27;02&#x27;, title:&#x27;סגנון עבודה&#x27;, paragraphs:[
-      `עובדת כרגע באופן תלוי-הכוונה ונשארת באזור הנוחות שלה - לא תמיד מעלה דגל כשמתפנה לה זמן ולא יוזמת לקיחת משימות נוספות. סביר שהמגמה תשתנה עם צבירת ביטחון וניסיון בסטודיו`
-    ]},
-    {type:&#x27;guide&#x27;, num:&#x27;03&#x27;, title:&#x27;מדריך ניהול&#x27;, items:[
-      {label:`מה עובד`, text:`אתגור הדרגתי - הוספת אחריות ומשימות במקביל, ועידוד יוזמה, בשילוב עם משוב ישיר וממוקד שהיא קולטת טוב. באופן כללי היא קצת יותר מתפזרת בפוקוס של העבודה (הרבה טלפון ובדברים אישיים שלה במהלך היום). אני התחלתי לעבוד איתה על מה שקשור לשיטת עבודה כדי לקחת אחריות על המשימות שתחתיה והעלתי את הנקודה שמצופה ממנה ליותר פרואקטיביות כשהיא רואה שאין אצלה מספיק משימות או שהיא צריכה לסגור מעגל על משימות שתחתיה.`},
-      {label:`ממה כדאי להימנע`, text:`להשאיר אותה יותר מדי זמן ב&#x27;אזור הנוחות&#x27; בלי דחיפה עדינה - הנטייה הטבעית שלה היא להמתין שיחלקו לה עבודה.`},
-      {label:`סטייל פידבק מומלץ`, text:`ישיר, תדיר, ומספק הזדמנות לתרגול בפועל ולא רק הערות.`},
-      {label:`ממה להימנע`, text:`לתת לה יותר מדי חופש בלי מסגרת - היא עדיין לא מבקשת עומס בעצמה.`}
-    ]},
-    {type:&#x27;text&#x27;, num:&#x27;05&#x27;, title:&#x27;פיתוח קריירה&#x27;, paragraphs:[
+    {num:&#x27;04&#x27;, title:&#x27;פיתוח קריירה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
       `מוקדם להגדיר כיוון קריירה מפורט - מאי בתחילת תקופת חפיפה. מומלץ להתמקד בשלב זה בעמידה בשלושת מדדי ההצלחה שהוגדרו (UX/UI עם workflow AI, ניהול מספר משימות במקביל, פוקוס לקוח), ולבסס עצמאות בסיסית לפני שמגדירים יעדי צמיחה ארוכי טווח.`
-    ]},
-    {type:&#x27;logisticsPlain&#x27;, num:&#x27;06&#x27;, title:&#x27;נקודות לוגיסטיות&#x27;, lines:[
+    ]}},
+    {num:&#x27;05&#x27;, title:&#x27;נקודות לוגיסטיות&#x27;, body:{type:&#x27;logisticsPlain&#x27;, lines:[
       `חתונה 19-20.8`,
-      `בהמשך הרחוק מתוכנן ירח דבש (לא יוגעת עוד מתי)`
-    ]}
+      `בהמשך הרחוק מתוכנן ירח דבש (טרם ידוע מתי)`
+    ]}}
   ]
 },
 {
   id:&#x27;litar&#x27;, num:&#x27;03&#x27;, name:&#x27;ליטל&#x27;, team:&#x27;בועז&#x27;,
-  tenure:`ותק בזמנגו- כשנה, התחילה בהתמחות, עברה למשרת סטודנטית ואחרי הירח דבש צפויה להיכנס למשרה מלאה.`,
+  tenure:`ותק בזמינגו- כשנה. התחילה בהתמחות, עברה למשרת סטודנטית, ואחרי ירח הדבש צפויה להיכנס למשרה מלאה.`,
   clients:`לקוחות עיקריים- מנורה, לאומי טרייד`,
-  chart:{
-    note:`&quot;שיתוף פעולה מול יחידות אחרות&quot; סומן &quot;לא רלוונטי&quot; בטופס ולכן הושמט; נוסף קריטריון AI חדש`,
-    title:`ליטל | ציונים לפי קריטריון - עדכון`,
-    items:[
-      {label:`מבצע/ת עבודה איכותית ויעילה`, value:6},
-      {label:`פתוח/ה לקבל משוב`, value:8},
-      {label:`לוקח/ת אחריות`, value:8},
-      {label:`חותר/ת למצוינות`, value:7},
-      {label:`עמידה בתפוקות, זמנים ואיכות`, value:7},
-      {label:`התנהגות אמינה והוגנת`, value:8},
-      {label:`עבודת צוות ושיתוף ידע`, value:7},
-      {label:`התמודדות עם שינויים`, value:8},
-      {label:`מעלה רעיונות ופתרונות יצירתיים`, value:6},
-      {label:`תודעת שירות`, value:7},
-      {label:`מתעדכן/ת ולומד/ת`, value:6},
-      {label:`מיישם/ת כלי AI (קריטריון חדש)`, value:6, highlight:true}
-    ]
-  },
   sections:[
-    {type:&#x27;text&#x27;, num:&#x27;01&#x27;, title:&#x27;תמונת מצב&#x27;, paragraphs:[
-      `ליטל הצטרפה כמתמחה בקיץ 2025 והחלה משרת סטודנטית בנובמבר. במהלך השנה האחרונה עבדה פעמיים בשבוע והייתה פחות גמישה מבחינת נתינת שעות נוספות (יותר תחושה של &quot;באה לעבודה&quot; ופחות רוצה לנצל הזדמנויות להתפתחויות מקצועיות).`,
-      `בשיחת המשוב שקיימנו ביולי ליטל שיתפה כי הייתה רוצה לקבל מהמנהלים יותר הכוונה להזדמנויות למידה ולחיבורים מקצועיים בתוך הארגון, מתוך רצון להרחיב את הידע שלה ולהיחשף לעולמות תוכן נוספים. שוחחנו על כך שחלק משמעותי מההתפתחות המקצועית תלוי גם ביוזמה האישית, בסקרנות וביכולת לזהות ולבקש באופן אקטיבי הזדמנויות המתאימות לתחומי העניין שלה, ולא להסתמך רק על הכוונה מצד המנהלים. לצד זאת, הסכמתי כי למנהלים יש תפקיד משמעותי ביצירת החיבורים הנכונים ובהנגשת הידע וההתמחויות הקיימים בארגון, כדי לאפשר לה להיחשף לתחומים חדשים ולמקסם את ההתפתחות המקצועית שלה.`
+    {num:&#x27;01&#x27;, title:&#x27;סיכום משובים קודמים&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+      `ליטל הצטרפה כמתמחה בקיץ 2025 והחלה משרת סטודנטית בנובמבר. בשלושת החודשים שנבדקו הפגינה מוסר עבודה גבוה, פתיחות למשימות ולתהליכי עבודה משתנים ויכולת טובה לעבודת צוות וקבלת ביקורת. הכיוונים שהוגדרו לשיפור: העמקת מחקר וחשיבה רוחבית על השראות, למידה עצמאית מתוך אתגר והתנסות חדשה, ופיתוח יוזמה וזיהוי הזדמנויות.`,
+      `תובנה מהמשוב הקודם: החוזקות הבין-אישיות נשמרות ומתחזקות, אך הפערים במחקר, יוזמה ודיוק לא נסגרו — שניים משלושת היעדים ל-2026 הם המשך ישיר של אותם כיוונים. (משוב קודם 20/01/2026 · 1 מתוך 4 יעדים הושגו במלואם.)`
+    ]}},
+    {num:&#x27;02&#x27;, title:&#x27;משוב יולי 2026&#x27;, subs:[
+      {num:&#x27;2.1&#x27;, title:&#x27;ציונים לפי קריטריון&#x27;, body:{type:&#x27;chart&#x27;, note:`&quot;שיתוף פעולה מול יחידות אחרות&quot; סומן &quot;לא רלוונטי&quot; בטופס ולכן הושמט`, items:[
+        {label:`מבצע/ת עבודה איכותית ויעילה`, value:6},
+        {label:`פתוח/ה לקבל משוב`, value:7},
+        {label:`לוקח/ת אחריות`, value:7},
+        {label:`חותר/ת למצוינות`, value:7},
+        {label:`עמידה בתפוקות, זמנים ואיכות`, value:7},
+        {label:`התנהגות אמינה והוגנת`, value:7},
+        {label:`עבודת צוות ושיתוף ידע`, value:7},
+        {label:`התמודדות עם שינויים`, value:7},
+        {label:`מעלה רעיונות ופתרונות יצירתיים`, value:6, highlight:true},
+        {label:`תודעת שירות`, value:7},
+        {label:`מתעדכן/ת ולומד/ת`, value:6},
+        {label:`הערכה כוללת`, value:7}
+      ]}},
+      {num:&#x27;2.2&#x27;, title:&#x27;טבלת סיכום — נקודות שימור, שיפור ויעדים&#x27;, body:{type:&#x27;goals3&#x27;, headers:[`נושאים בולטים לחיוב`,`נקודות שיפור`,`יעדים לשנה הקרובה`], columns:[
+        [`אחריות אישית ורצינות בביצוע המשימות`,`פתיחות לקבלת משוב ולמידה מתמשכת`],
+        [`הקפדה על איכות התוצרים - לעיתים הועברו תוצרים שדרשו עדיין דיוקים או ליטוש`,`סקרנות וחשיבה יצירתית - נשענת בעיקר על פתרונות מוכרים`],
+        [`הובלת תכולות עיצוב מקצה לקצה תוך הגברת העצמאות המקצועית`,`פיתוח חשיבה עיצובית ויוזמה מקצועית בשילוב AI`,`פיתוח מומחיות מקצועית והעברתו ללמידה הצוותית`]
+      ]}}
     ]},
-    {type:&#x27;goals3&#x27;, headers:[`נושאים בולטים לחיוב`,`נקודות שיפור`,`יעדים לשנה הקרובה`], columns:[
-      [`אחריות אישית ומוסר עבודה גבוה`,`פתיחות לקבלת משוב ולמידה מתמשכת`,`עבודת צוות טובה ותקשורת נעימה עם לקוחות`],
-      [`הקפדה על איכות התוצרים לפני מסירה`,`העמקת מחקר וחשיבה יצירתית - נשענת בעיקר על פתרונות מוכרים`,`יוזמה בזיהוי הזדמנויות לשיפור`],
-      [`הובלת תכולות עיצוב מקצה לקצה בעצמאות גדלה`,`פיתוח חשיבה עיצובית ויוזמה מקצועית בשילוב AI`,`בחירת תחום התמחות והעברת ידע לצוות`]
+    {num:&#x27;03&#x27;, title:&#x27;טיפים לניהול ועבודה משותפת&#x27;, subs:[
+      {num:&#x27;3.1&#x27;, title:&#x27;סגנון עבודה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `מפגינה אחריות אישית ומוסר עבודה גבוה ומבצעת את המשימות ברצינות ובהשקעה. נוטה לבחור בפתרונות מוכרים ובטוחים על פני חשיבה יצירתית פתוחה — הציון הנמוך ביותר (5–6) הוא ב&quot;מעלה רעיונות ופתרונות יצירתיים&quot;. ציונים דומים ב&quot;ביצוע עבודה איכותית&quot; מצביעים על צורך בפיתוח עומק, דיוק ובקרת איכות לפני מסירה, לצד מוסר העבודה הגבוה שכבר קיים. בפרוייקט מנורה, לדוגמה, חלק מהתוצרים דרשו ליטוש נוסף לאחר שהועברו הלאה.`
+      ]}},
+      {num:&#x27;3.2&#x27;, title:&#x27;לתשומת לב המנהל.ת&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `משוב ישיר ועניני — היא מגיבה לו טוב ומיישמת. עבדה שעתית, ולכן ניהלנו את המשימות שלה במסמך שבועי שעודכן בהתאם לצרכי הצוות (עזר גם למעקב שעות).`,
+        `הטלת אחריות רחבה יותר בהדרגה עם המעבר למשרה מלאה, ומרחב לפתח מומחיות בתחום שהיא פחות בטוחה בו כיום (יעד שהוגדר לה ל-2026). ליטל ביקשה יותר הכוונה להזדמנויות למידה ולחיבורים מקצועיים בארגון — למנהל תפקיד משמעותי ביצירת החיבורים ובהנגשת הידע, לצד יוזמה אישית שלה.`
+      ]}},
+      {num:&#x27;3.3&#x27;, title:&#x27;מומלץ להימנע&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `לתת לה להסתפק בפתרון המוכר הראשון בלי לדרוש כיווני חשיבה נוספים, ולאפשר לה להישאר באזור הנוחות בלי דחיפה — כך היוזמה והעומק המקצועי לא יתפתחו.`
+      ]}},
+      {num:&#x27;3.4&#x27;, title:&#x27;חשוב לדחוף להנעה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `לדרוש ממנה להביא כמה כיווני חשיבה לפני שבוחרים פתרון (קואצ&#x27;ינג תומך אך מאתגר), לעודד מחקר עצמאי, סקרנות ושילוב עקבי של כלי AI, ולחזק בקרת איכות ודיוק לפני מסירה.`
+      ]}}
     ]},
-    {type:&#x27;text&#x27;, num:&#x27;03&#x27;, title:&#x27;סגנון עבודה&#x27;, paragraphs:[
-      `נוטה לבחור בפתרונות מוכרים ובטוחים על פני חשיבה יצירתית פתוחה - הציון הנמוך ביותר שלה, 5, הוא ב&#x27;מעלה רעיונות ופתרונות יצירתיים&#x27;. ציון 6 גם ב&#x27;ביצוע עבודה איכותית ויעילה&#x27; וב&#x27;לוקחת אחריות על התהליך&#x27; מצביע על צורך בפיתוח עצמאות ועומק, לצד מוסר העבודה הגבוה שכבר קיים.`
-    ]},
-    {type:&#x27;guide&#x27;, num:&#x27;04&#x27;, title:&#x27;מדריך ניהול&#x27;, items:[
-      {label:`מה עובד`, text:`היא מגיבה טוב למשוב ישיר ועניני - אפשר וכדאי לתת לה פידבק ברור על איכות ולצפות שתיישם אותו. באופן כללי בגלל שהיא עובדת שעתית אז המשימות שהייתי נותנת לה היו מתוכננות משבוע לשבוע בהתאם לצרכים של הצוות. היה לנו מסמך שהייתי מעדכנת לה שם את המשימות כל פעם (וזה עזר לי אחר כך במילוי שעות עליה)`},
-      {label:`מה חשוב`, text:`להטיל עליה אחריות רחבה יותר בהדרגה עם המעבר למשרה מלאה, ולתת לה מרחב לפתח מומחיות בתחום שהיא פחות בטוחה בו כיום - יעד שהוגדר לה במפורש ל-2026.`},
-      {label:`קואצ&#x27;ינג מומלץ`, text:`תומך אך מאתגר - לדרוש ממנה להביא כמה כיווני חשיבה לפני שבוחרים פתרון, כדי לדחוף אותה מעבר לפתרון הראשון שעולה לה. נקודות למנטורינג:`}
-    ]},
-    {type:&#x27;text&#x27;, num:&#x27;05&#x27;, title:&#x27;פיתוח קריירה&#x27;, paragraphs:[
-      `עם המעבר למשרה מלאה, ההזדמנות המרכזית היא הובלת תכולות עיצוב מקצה לקצה באופן עצמאי יותר, פיתוח מומחיות בתחום מוגדר שתוכל בהמשך לחלוק עם הצוות, ושילוב מושכל של AI בתהליך העיצוב - מחקר, יצירת רעיונות וגיבוש קונספטים.`
-    ]},
-    {type:&#x27;logistics&#x27;, num:&#x27;06&#x27;, title:&#x27;נקודות לוגיסטיות&#x27;, bullets:[
+    {num:&#x27;04&#x27;, title:&#x27;פיתוח קריירה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+      `עם המעבר למשרה מלאה, ההזדמנות המרכזית היא הובלת תכולות עיצוב מקצה לקצה באופן עצמאי יותר, פיתוח מומחיות בתחום מוגדר שתוכל בהמשך לחלוק עם הצוות, ושילוב מושכל של AI בתהליך העיצוב — מחקר, יצירת רעיונות וגיבוש קונספטים.`
+    ]}},
+    {num:&#x27;05&#x27;, title:&#x27;נקודות לוגיסטיות&#x27;, body:{type:&#x27;logistics&#x27;, bullets:[
       `26.7-8.8 הקמות (לא עובדת)`,
       `אוגוסט (7 ימי עבודה) ← 9.8-19.8 חוזרת לעבודה`,
       {text:`קדימה:`, sub:[
-        `1.9 פנויה להתחלת משרה מלאה (בפועל סוכם עם אסף להעלות את מספר הימים שהיא עובדת ולהישאר במשרה שעתית)`,
+        `1.9 פנויה להתחלת משרה מלאה (בפועל סוכם עם אסף להעלות את מספר הימים ולהישאר במשרה שעתית)`,
         `7-15.10 חופש חתונה`,
-        `28.10-2.12 ירח דבש (אחריו כנראה תתחיל את המשרה המלאה, כדאי לסכם את זה לפני שתצא כמובן)`
+        `28.10-2.12 ירח דבש (אחריו כנראה תתחיל את המשרה המלאה — כדאי לסכם את זה לפני שתצא)`
       ]}
-    ]}
+    ]}}
   ]
 },
 {
   id:&#x27;ratam&#x27;, num:&#x27;04&#x27;, name:&#x27;רתם&#x27;, team:&#x27;נורה&#x27;,
   tenure:`ותק בזמינגו- דצמבר 2025 (Mid-level)`,
   clients:`לקוחות עיקריים- מנורה (פורטל סוכנים, סטייל גייד, קונספט אתר שיווקי), לאומי טרייד (פתיחת תיק, עולם הייעוץ, שווקים), Hendrix`,
-  chart:{
-    note:`מבוסס על משוב רותם.pdf (הציונים הסופיים שהוזנו ב-6.7.26)`,
-    title:`רתם | ציונים לפי קריטריון - עדכון`,
-    items:[
-      {label:`מבצע/ת עבודה איכותית ויעילה`, value:7},
-      {label:`פתוח/ה לקבל משוב`, value:8},
-      {label:`לוקח/ת אחריות`, value:8},
-      {label:`חותר/ת למצוינות`, value:7},
-      {label:`עמידה בתפוקות, זמנים ואיכות`, value:8},
-      {label:`שיתוף פעולה מול יחידות אחרות`, value:8},
-      {label:`התנהגות אמינה והוגנת`, value:8},
-      {label:`עבודת צוות ושיתוף ידע`, value:7},
-      {label:`התמודדות עם שינויים`, value:6},
-      {label:`מעלה רעיונות ופתרונות יצירתיים`, value:7},
-      {label:`תודעת שירות`, value:6},
-      {label:`מתעדכן/ת ולומד/ת`, value:6, highlight:true}
-    ]
-  },
   sections:[
-    {type:&#x27;text&#x27;, num:&#x27;01&#x27;, title:&#x27;תמונת מצב&#x27;, paragraphs:[
-      `רתם הצטרף לזמינגו בדצמבר 2025 בתפקיד Mid-level. שיחת המשוב מ-20/01/2026 ציינה עבודת צוות ובריינסטורמינג פתוח, אחריות ומוסר עבודה גבוהים, ויוזמה באיתור הזדמנויות - לצד צורך לחזק מיקוד (הבחנה בין עיקר לטפל) וסדר וארגון אישי. רתם הראה התקדמות ברורה בממד הניהולי-ארגוני (ריבוי משימות, אחריות, תיעדוף), אך הפער בתקשורת מול לקוחות ובהבחנה בין עיקר לטפל נותר עקבי בין שני המשובים - ואף קיבל דגש חזק יותר במשוב החדש, כולל יעד נפרד לשנה הקרובה בנושא תקשורת ושירותיות מקצועית.`
+    {num:&#x27;01&#x27;, title:&#x27;סיכום משובים קודמים&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+      `רתם הצטרף לזמינגו בדצמבר 2025 בתפקיד Mid-level. שיחת המשוב מ-20/01/2026 ציינה עבודת צוות ובריינסטורמינג פתוח, אחריות ומוסר עבודה גבוהים ויוזמה באיתור הזדמנויות — לצד צורך לחזק מיקוד (הבחנה בין עיקר לטפל) וסדר וארגון אישי. משוב 5 החודשים סיפק בדיקת ביניים על אותם נושאים.`,
+      `תובנה מהמשוב הקודם: רתם הראה התקדמות ברורה בממד הניהולי-ארגוני (ריבוי משימות, אחריות, תיעדוף), אך הפער בתקשורת מול לקוחות ובהבחנה בין עיקר לטפל נותר עקבי בין שני המשובים — ואף קיבל דגש חזק יותר במשוב החדש, כולל יעד נפרד בנושא תקשורת ושירותיות מקצועית. (משובים קודמים 20/01/2026 ומשוב 5 חודשים · שיפור מוכח 1 מתוך 5.)`
+    ]}},
+    {num:&#x27;02&#x27;, title:&#x27;משוב יולי 2026&#x27;, subs:[
+      {num:&#x27;2.1&#x27;, title:&#x27;ציונים לפי קריטריון&#x27;, body:{type:&#x27;chart&#x27;, note:`מבוסס על משוב רותם.pdf (הציונים הסופיים שהוזנו ב-6.7.26)`, items:[
+        {label:`מבצע/ת עבודה איכותית ויעילה`, value:7},
+        {label:`פתוח/ה לקבל משוב`, value:8},
+        {label:`לוקח/ת אחריות`, value:8},
+        {label:`חותר/ת למצוינות`, value:7},
+        {label:`עמידה בתפוקות, זמנים ואיכות`, value:8},
+        {label:`שיתוף פעולה מול יחידות אחרות`, value:8},
+        {label:`התנהגות אמינה והוגנת`, value:8},
+        {label:`עבודת צוות ושיתוף ידע`, value:7},
+        {label:`התמודדות עם שינויים`, value:6},
+        {label:`מעלה רעיונות ופתרונות יצירתיים`, value:7},
+        {label:`תודעת שירות`, value:6, highlight:true},
+        {label:`מתעדכן/ת ולומד/ת`, value:6},
+        {label:`הערכה כוללת`, value:7}
+      ]}},
+      {num:&#x27;2.2&#x27;, title:&#x27;טבלת סיכום — נקודות שימור, שיפור ויעדים&#x27;, body:{type:&#x27;goals3&#x27;, headers:[`נושאים בולטים לחיוב`,`נקודות שיפור`,`יעדים לשנה הקרובה`], columns:[
+        [`אחריות אישית גבוהה ובעלות מלאה על משימות`,`שותף מקצועי שניתן לסמוך עליו, מביא חשיבה ביקורתית`,`שיפור מוכח בניהול מספר פרוייקטים במקביל`,`כתובת מקצועית עבור חברי צוות צעירים`],
+        [`הבחנה בין עיקר לטפל - פער מרכזי שלא נסגר`,`תקשורת ושירותיות מול לקוחות - החמיר בין שני המשובים`,`הרחבת שימוש בכלי AI וטכנולוגיות חדשות`,`הובלת יוזמות מקצה לקצה, לא רק זיהוין`],
+        [`הובלת יוזמות ומתודולוגיות מקצה לקצה - מהרעיון ועד ההטמעה בפועל, כולל שיתוף ידע וליווי חברי צוות`,`אימוץ עקבי של כלי AI וטכנולוגיות חדשות בעבודה היומיומית`,`הסתגלות והובלה בפרויקטים חדשים - גישה פתוחה, סקרנית ומתודולוגית כבר בשלבים מוקדמים`,`תקשורת ושירותיות מקצועית מול לקוחות ובעלי עניין - מאוזנת, מכבדת ומקדמת שיתוף פעולה`]
+      ]}}
     ]},
-    {type:&#x27;goals3&#x27;, headers:[`נושאים בולטים לחיוב`,`נקודות שיפור`,`יעדים לשנה הקרובה`], columns:[
-      [`אחריות אישית גבוהה ובעלות מלאה על משימות`,`שותף מקצועי שניתן לסמוך עליו, מביא חשיבה ביקורתית`,`שיפור מוכח בניהול מספר פרוייקטים במקביל`,`כתובת מקצועית עבור חברי צוות צעירים`],
-      [`הבחנה בין עיקר לטפל - פער מרכזי שלא נסגר`,`תקשורת ושירותיות מול לקוחות - החמיר בין שני המשובים`,`הרחבת שימוש בכלי AI וטכנולוגיות חדשות`,`הובלת יוזמות מקצה לקצה, לא רק זיהוין`],
-      [`הובלת יוזמה או מתודולוגיית עבודה אחת מקצה לקצה`,`אימוץ עקבי של כלי AI וטכנולוגיות חדשות`,`גישה פתוחה, סקרנית ומתודולוגית יותר בכניסה לפרוייקטים חדשים`]
-    ]},
-    {type:&#x27;text&#x27;, num:&#x27;02&#x27;, title:&#x27;סגנון עבודה&#x27;, paragraphs:[
-      `עובד טוב באופן ממוקד ועמוק על משימה אחת, אך ניהול מספר משימות ופרוייקטים במקביל הוגדר כאתגר במשוב 5 החודשים - ולפי טופס ההערכה החדש חל בו שיפור משמעותי, עם עלייה לציון 8 בעמידה בתפוקות. זו אחת ההתקדמויות הברורות והמתועדות ביותר שלו. עדיין קיים אתגר בהבחנה בין עיקר לטפל - נטייה להעמיק באלמנטים בעלי ערך עיצובי גבוה אך השפעה נמוכה על מטרות הפרוייקט.`
-    ]},
-    {type:&#x27;guide&#x27;, num:&#x27;03&#x27;, title:&#x27;מדריך ניהול&#x27;, items:[
-      {label:`מה עובד`, texts:[
-        `לתת מרחב לצד אחריות - לאפשר לו להוביל תחומים ויוזמות באופן עצמאי, תוך ליווי ומשוב שוטף, כדי לחזק את המעבר שלו ממבצע מקצועי למוביל תהליכים.`,
-        `לבנות מערכת יחסים המבוססת על אמון ושיח פתוח - לקיים תקשורת ישירה, בגובה העיניים, ובשקיפות, לאפשר שיח מקצועי פתוח גם במצבי אי-הסכמה, ולבנות מערכת יחסים המבוססת על אמון הדדי, שתאפשר לרותם להביע את עמדתו ולהיות פתוח לקבלת משוב.`
-      ]},
-      {label:`מה דורש תשומת לב`, texts:[
-        `ללוות את הטמעת החדשנות באופן פרקטי - לעודד את רותם להתנסות בכלי AI ובמתודולוגיות עבודה חדשות מתוך חיבור לאתגרים אמיתיים בפרוייקטים, כך שהלמידה תהיה יישומית ותייצר ערך מיידי לעבודה השוטפת.`,
-        `לסייע ביצירת איזון בין איכות לביצוע - לעזור לרותם לזהות מתי נכון להשקיע בירידה לפרטים ומתי להתמקד במה שמייצר את הערך הגבוה ביותר לפרוייקט, תוך שמירה על איזון בין העבודה לבין עומסים אישיים ותקופות מאתגרות.`,
-        `לספק משוב שוטף על התנהלות מול לקוחות - לשקף לרותם באופן קונקרטי מצבים שבהם התקשורת מול לקוחות יכול להיות מותאם יותר, וללוות אותו בפיתוח היכולת לשלב בין הישירות והאותנטיות המאפיינות אותו לבין תקשורת שירותית, אמפתית ומותאמת לסוג הלקוח ולשלב במערכת היחסים.`
-      ]},
-      {label:`קואצ&#x27;ינג מומלץ`, texts:[
-        `לאתגר אותו באופן יזום לצאת מאזורי הנוחות ולהתנסות בכלים, טכנולוגיות ומתודולוגיות חדשות.`,
-        `לכוון אותו לחשיבה על &lt;b&gt;Impact&lt;/b&gt; - תיעדוף נכון בין הבחנה בין עיקר לטפל ואיזון בין איכות, זמן וערך עסקי.`,
-        `לספק משוב קונקרטי ושוטף על התנהלות מול לקוחות וממשקים, עם דוגמאות מהשטח.`,
-        `לעודד אותו להוביל רעיונות משלב החשיבה ועד ליישום בפועל.`,
-        `לשקף לו התקדמות והצלחות לאורך הדרך, לצד הצבת אתגרי התפתחות חדשים.`,
-        `לאפשר שיח פתוח, בגובה העיניים, המבוסס על אמון ומשוב הדדי.`
-      ]},
-      {label:`ממה להימנע`, texts:[
+    {num:&#x27;03&#x27;, title:&#x27;טיפים לניהול ועבודה משותפת&#x27;, subs:[
+      {num:&#x27;3.1&#x27;, title:&#x27;סגנון עבודה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `עובד טוב באופן ממוקד ועמוק על משימה אחת. ניהול מספר משימות ופרוייקטים במקביל הוגדר כאתגר במשוב 5 החודשים — ולפי הטופס החדש חל בו שיפור משמעותי, עם עלייה לציון 8 בעמידה בתפוקות. זו אחת ההתקדמויות הברורות והמתועדות ביותר שלו. עדיין קיים אתגר בהבחנה בין עיקר לטפל — נטייה להעמיק באלמנטים בעלי ערך עיצובי גבוה אך השפעה נמוכה על מטרות הפרוייקט.`
+      ]}},
+      {num:&#x27;3.2&#x27;, title:&#x27;לתשומת לב המנהל.ת&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `מרחב לצד אחריות — לאפשר לו להוביל תחומים ויוזמות באופן עצמאי, תוך ליווי ומשוב שוטף, כדי לחזק את המעבר ממבצע מקצועי למוביל תהליכים.`,
+        `אמון ושיח פתוח — תקשורת ישירה בגובה העיניים ובשקיפות, שמאפשרת שיח מקצועי גם במצבי אי-הסכמה ובונה אמון הדדי.`,
+        `ליווי פרקטי — ללוות את הטמעת החדשנות ו-AI מתוך חיבור לאתגרים אמיתיים בפרוייקטים, ולספק משוב שוטף וקונקרטי על ההתנהלות מול לקוחות (עם דוגמאות מהשטח).`
+      ]}},
+      {num:&#x27;3.3&#x27;, title:&#x27;מומלץ להימנע&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
         `Micromanagement או פיקוח צמוד על אופן הביצוע.`,
         `מתן משימות ביצועיות בלבד, ללא הזדמנויות להוביל ולהשפיע.`,
         `ניסיון &quot;להחליש&quot; את הישירות שלו, במקום לעזור לו להתאים אותה לסיטואציה ולקהל.`,
-        `לאפשר לו להישאר לאורך זמן באזורי הנוחות המקצועיים שלו, ללא אתגרי צמיחה והתפתחות.`
-      ]}
+        `לאפשר לו להישאר לאורך זמן באזורי הנוחות המקצועיים, ללא אתגרי צמיחה.`
+      ]}},
+      {num:&#x27;3.4&#x27;, title:&#x27;חשוב לדחוף להנעה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+        `לאתגר אותו באופן יזום לצאת מאזורי הנוחות ולהתנסות בכלים, טכנולוגיות ומתודולוגיות חדשות.`,
+        `לכוון אותו לחשיבה על Impact — תיעדוף נכון בין עיקר לטפל ואיזון בין איכות, זמן וערך עסקי.`,
+        `לעודד אותו להוביל רעיונות משלב החשיבה ועד ליישום בפועל, ולשקף לו התקדמות והצלחות לצד אתגרי התפתחות חדשים.`
+      ]}}
     ]},
-    {type:&#x27;text&#x27;, num:&#x27;04&#x27;, title:&#x27;פיתוח קריירה&#x27;, paragraphs:[
-      `לתת לו יותר הזדמנויות להובלה מקצועית וחניכה של מעצבים צעירים בתוך הסטודיו, אך עדיין לשמור לו על פרוייקטים של הנדס און (הוא לא בהכרח מתאים למסלול ניהולי).`
-    ]},
-    {type:&#x27;logistics&#x27;, num:&#x27;05&#x27;, title:&#x27;נקודות לוגיסטיות&#x27;, bullets:[
-      `באופן כללי הוא ממש מעדכן על תכנונים קדימה, על אילוצים ועל עדכוני סיום עבודה (אני אהבתי את זה:)`,
-      `יש לו יום בשבוע שהוא יוצא מוקדם ב16:00 (בדרך כלל רביעי)`,
-      `10-17/9 חופשה במאוריציוס (5 ימי חופש)`,
-      {text:`תאריכים שצופה שיצטרך עדכון בהם חופשים (לא סופי)`, sub:[
-        `9-13/8: אעדכן כשנקבל עדכון מהגן. זה שבוע שאמורים להחזיר להורים על המלחמה עם איראן, עמרי לא היה אז בגן אז עדיין אז יכול להיות שלא נהיה זכאים. מעדכן`,
-        `16-31/8 זה שבועיים שאין גן. אני צופה שאצטרך כאן לפחות יומיים`
-      ]}
-    ]}
+    {num:&#x27;04&#x27;, title:&#x27;פיתוח קריירה&#x27;, body:{type:&#x27;text&#x27;, paragraphs:[
+      `לתת לו יותר הזדמנויות להובלה מקצועית וחניכה של מעצבים צעירים בסטודיו, אך לשמור לו על פרוייקטים של hands-on (הוא לא בהכרח מתאים למסלול ניהולי).`
+    ]}},
+    {num:&#x27;05&#x27;, title:&#x27;נקודות לוגיסטיות&#x27;, body:{type:&#x27;logistics&#x27;, bullets:[
+      `באופן כללי ממש מעדכן על תכנונים קדימה, על אילוצים ועל סיום עבודה (אהבתי את זה).`,
+      `יש לו יום בשבוע שהוא יוצא מוקדם ב-16:00 (בדרך כלל רביעי).`,
+      `17.8 ו-26.8 — חופש.`,
+      `10-17/9 חופשה במאוריציוס (5 ימי חופש).`
+    ]}}
   ]
 }
 ];
@@ -1944,11 +2132,10 @@ function el(tag, cls, html){
   return e;
 }
 
-function renderChart(chart){
-  const wrap = el(&#x27;div&#x27;,&#x27;section&#x27;);
-  if(chart.note) wrap.appendChild(el(&#x27;p&#x27;,&#x27;chart-note&#x27;, chart.note));
-  wrap.appendChild(el(&#x27;p&#x27;,&#x27;chart-title&#x27;, chart.title));
-  chart.items.forEach(item=&gt;{
+function renderChartBars(body){
+  const wrap = el(&#x27;div&#x27;,&#x27;chart-wrap&#x27;);
+  if(body.note) wrap.appendChild(el(&#x27;p&#x27;,&#x27;chart-note&#x27;, body.note));
+  body.items.forEach(item=&gt;{
     const row = el(&#x27;div&#x27;,&#x27;chart-row&#x27;);
     row.appendChild(el(&#x27;div&#x27;,&#x27;chart-label&#x27;, item.label));
     const track = el(&#x27;div&#x27;,&#x27;chart-track&#x27;);
@@ -1961,131 +2148,77 @@ function renderChart(chart){
   });
   const axis = el(&#x27;div&#x27;,&#x27;chart-axis&#x27;);
   axis.appendChild(el(&#x27;div&#x27;,&#x27;&#x27;));
-  const axisTrack = el(&#x27;div&#x27;,&#x27;chart-axis-track&#x27;);
-  [0,2,4,6,8,10].forEach(n=&gt; axisTrack.appendChild(el(&#x27;span&#x27;,&#x27;&#x27;,n)) );
-  axis.appendChild(axisTrack);
+  const at = el(&#x27;div&#x27;,&#x27;chart-axis-track&#x27;);
+  [0,2,4,6,8,10].forEach(n=&gt; at.appendChild(el(&#x27;span&#x27;,&#x27;&#x27;,n)) );
+  axis.appendChild(at);
   axis.appendChild(el(&#x27;div&#x27;,&#x27;&#x27;));
   wrap.appendChild(axis);
   return wrap;
 }
-
-function renderSection(sec){
-  if(sec.type === &#x27;text&#x27;){
-    const s = el(&#x27;div&#x27;,&#x27;section&#x27;);
-    s.appendChild(el(&#x27;h3&#x27;,&#x27;&#x27;, `&lt;span class=&quot;num&quot;&gt;${sec.num} |&lt;/span&gt; ${sec.title}`));
-    sec.paragraphs.forEach(p=&gt; s.appendChild(el(&#x27;p&#x27;,&#x27;&#x27;,p)) );
-    return s;
-  }
-  if(sec.type === &#x27;goals3&#x27;){
-    const s = el(&#x27;div&#x27;,&#x27;section&#x27;);
-    const grid = el(&#x27;div&#x27;,&#x27;goals-grid&#x27;);
-    sec.headers.forEach((h,i)=&gt;{
-      const col = el(&#x27;div&#x27;,&#x27;goals-col&#x27;);
-      col.appendChild(el(&#x27;h4&#x27;,&#x27;&#x27;,h));
-      const ul = el(&#x27;ul&#x27;);
-      sec.columns[i].forEach(li=&gt; ul.appendChild(el(&#x27;li&#x27;,&#x27;&#x27;,li)) );
-      col.appendChild(ul);
-      grid.appendChild(col);
-    });
-    s.appendChild(grid);
-    return s;
-  }
-  if(sec.type === &#x27;status2&#x27;){
-    const s = el(&#x27;div&#x27;,&#x27;section&#x27;);
-    s.appendChild(el(&#x27;h3&#x27;,&#x27;&#x27;, `&lt;span class=&quot;num&quot;&gt;${sec.num} |&lt;/span&gt; ${sec.title}`));
-    const table = el(&#x27;table&#x27;,&#x27;status-table&#x27;);
-    const thead = el(&#x27;thead&#x27;);
-    const trh = el(&#x27;tr&#x27;);
-    sec.headers.forEach(h=&gt; trh.appendChild(el(&#x27;th&#x27;,&#x27;&#x27;,h)) );
-    thead.appendChild(trh);
-    table.appendChild(thead);
-    const tbody = el(&#x27;tbody&#x27;);
-    sec.rows.forEach(r=&gt;{
-      const tr = el(&#x27;tr&#x27;);
-      r.forEach(c=&gt; tr.appendChild(el(&#x27;td&#x27;,&#x27;&#x27;,c)) );
-      tbody.appendChild(tr);
-    });
-    table.appendChild(tbody);
-    s.appendChild(table);
-    return s;
-  }
-  if(sec.type === &#x27;guide&#x27;){
-    const s = el(&#x27;div&#x27;,&#x27;section&#x27;);
-    s.appendChild(el(&#x27;h3&#x27;,&#x27;&#x27;, `&lt;span class=&quot;num&quot;&gt;${sec.num} |&lt;/span&gt; ${sec.title}`));
-    sec.items.forEach(it=&gt;{
-      const box = el(&#x27;div&#x27;,&#x27;guide-item&#x27;);
-      box.appendChild(el(&#x27;span&#x27;,&#x27;guide-chip&#x27;, it.label));
-      if(it.texts){
-        const ul = el(&#x27;ul&#x27;,&#x27;guide-bullets&#x27;);
-        it.texts.forEach(t=&gt; ul.appendChild(el(&#x27;li&#x27;,&#x27;&#x27;,t)) );
-        box.appendChild(ul);
-      } else {
-        box.appendChild(el(&#x27;p&#x27;,&#x27;&#x27;,it.text));
-      }
-      s.appendChild(box);
-    });
-    return s;
-  }
-  if(sec.type === &#x27;logistics&#x27;){
-    const s = el(&#x27;div&#x27;,&#x27;section&#x27;);
-    s.appendChild(el(&#x27;h3&#x27;,&#x27;&#x27;, `&lt;span class=&quot;num&quot;&gt;${sec.num} |&lt;/span&gt; ${sec.title}`));
-    const ul = el(&#x27;ul&#x27;,&#x27;logi-list&#x27;);
-    sec.bullets.forEach(b=&gt;{
-      const li = el(&#x27;li&#x27;);
-      if(typeof b === &#x27;string&#x27;){
-        li.innerHTML = b;
-      } else {
-        li.innerHTML = b.text;
-        const sub = el(&#x27;ul&#x27;,&#x27;logi-sub&#x27;);
-        b.sub.forEach(s2=&gt; sub.appendChild(el(&#x27;li&#x27;,&#x27;&#x27;,s2)) );
-        li.appendChild(sub);
-      }
-      ul.appendChild(li);
-    });
-    s.appendChild(ul);
-    return s;
-  }
-  if(sec.type === &#x27;logisticsPlain&#x27;){
-    const s = el(&#x27;div&#x27;,&#x27;section&#x27;);
-    s.appendChild(el(&#x27;h3&#x27;,&#x27;&#x27;, `&lt;span class=&quot;num&quot;&gt;${sec.num} |&lt;/span&gt; ${sec.title}`));
-    const wrap = el(&#x27;div&#x27;,&#x27;logi-plain&#x27;);
-    sec.lines.forEach(l=&gt; wrap.appendChild(el(&#x27;p&#x27;,&#x27;&#x27;,l)) );
-    s.appendChild(wrap);
-    return s;
-  }
+function renderGoals(body){
+  const grid = el(&#x27;div&#x27;,&#x27;goals-grid&#x27;);
+  body.headers.forEach((hd,i)=&gt;{
+    const col = el(&#x27;div&#x27;,&#x27;goals-col&#x27;);
+    col.appendChild(el(&#x27;h4&#x27;,&#x27;&#x27;,hd));
+    const ul = el(&#x27;ul&#x27;);
+    body.columns[i].forEach(li=&gt; ul.appendChild(el(&#x27;li&#x27;,&#x27;&#x27;,li)) );
+    col.appendChild(ul);
+    grid.appendChild(col);
+  });
+  return grid;
 }
-
+function renderLogistics(body){
+  const ul = el(&#x27;ul&#x27;,&#x27;logi-list&#x27;);
+  body.bullets.forEach(b=&gt;{
+    const li = el(&#x27;li&#x27;);
+    if(typeof b === &#x27;string&#x27;){ li.innerHTML = b; }
+    else { li.innerHTML = b.text; const sub = el(&#x27;ul&#x27;,&#x27;logi-sub&#x27;); b.sub.forEach(s2=&gt; sub.appendChild(el(&#x27;li&#x27;,&#x27;&#x27;,s2)) ); li.appendChild(sub); }
+    ul.appendChild(li);
+  });
+  return ul;
+}
+function renderBody(body){
+  if(!body) return el(&#x27;div&#x27;);
+  if(body.type === &#x27;text&#x27;){ const w = el(&#x27;div&#x27;,&#x27;body-text&#x27;); body.paragraphs.forEach(p=&gt; w.appendChild(el(&#x27;p&#x27;,&#x27;&#x27;,p)) ); return w; }
+  if(body.type === &#x27;list&#x27;){ const w = el(&#x27;div&#x27;); if(body.lead) w.appendChild(el(&#x27;p&#x27;,&#x27;&#x27;,body.lead)); const ul = el(&#x27;ul&#x27;,&#x27;logi-list&#x27;); body.items.forEach(it=&gt; ul.appendChild(el(&#x27;li&#x27;,&#x27;&#x27;,it)) ); w.appendChild(ul); return w; }
+  if(body.type === &#x27;chart&#x27;){ return renderChartBars(body); }
+  if(body.type === &#x27;goals3&#x27;){ return renderGoals(body); }
+  if(body.type === &#x27;logistics&#x27;){ return renderLogistics(body); }
+  if(body.type === &#x27;logisticsPlain&#x27;){ const w = el(&#x27;div&#x27;,&#x27;logi-plain&#x27;); body.lines.forEach(l=&gt; w.appendChild(el(&#x27;p&#x27;,&#x27;&#x27;,l)) ); return w; }
+  return el(&#x27;div&#x27;);
+}
+function renderMainSection(sec){
+  const s = el(&#x27;div&#x27;,&#x27;section&#x27;);
+  s.appendChild(el(&#x27;h3&#x27;,&#x27;&#x27;, `&lt;span class=&quot;num&quot;&gt;${sec.num} |&lt;/span&gt; ${sec.title}`));
+  if(sec.body) s.appendChild(renderBody(sec.body));
+  if(sec.subs){ sec.subs.forEach(sub=&gt;{
+    s.appendChild(el(&#x27;h4&#x27;,&#x27;sub-head&#x27;, `&lt;span class=&quot;snum&quot;&gt;${sub.num}&lt;/span&gt; ${sub.title}`));
+    s.appendChild(renderBody(sub.body));
+  }); }
+  return s;
+}
 function renderEmployee(emp){
   const panel = el(&#x27;div&#x27;,&#x27;panel&#x27;);
   panel.id = &#x27;panel-&#x27;+emp.id;
   panel.setAttribute(&#x27;role&#x27;,&#x27;tabpanel&#x27;);
   panel.setAttribute(&#x27;aria-labelledby&#x27;,&#x27;tab-&#x27;+emp.id);
   panel.setAttribute(&#x27;tabindex&#x27;,&#x27;0&#x27;);
-
   panel.appendChild(el(&#x27;div&#x27;,&#x27;ghost-num&#x27;, emp.num));
   if(emp.team) panel.appendChild(el(&#x27;p&#x27;,&#x27;team-tag&#x27;, `צוות ${emp.team}`));
   panel.appendChild(el(&#x27;h2&#x27;,&#x27;employee-name&#x27;, emp.name));
-
   const info = el(&#x27;div&#x27;,&#x27;info-box&#x27;);
   [emp.tenure, emp.clients].forEach(line=&gt;{
     const row = el(&#x27;div&#x27;,&#x27;info-line&#x27;);
     row.appendChild(el(&#x27;span&#x27;,&#x27;info-marker&#x27;));
     const parts = line.split(/-(.+)/s);
-    if(parts.length &gt; 1){
-      row.appendChild(el(&#x27;span&#x27;,&#x27;&#x27;, `&lt;b&gt;${parts[0]}&lt;/b&gt;-${parts[1]}`));
-    } else {
-      row.appendChild(el(&#x27;span&#x27;,&#x27;&#x27;, line));
-    }
+    if(parts.length &gt; 1){ row.appendChild(el(&#x27;span&#x27;,&#x27;&#x27;, `&lt;b&gt;${parts[0]}&lt;/b&gt;-${parts[1]}`)); }
+    else { row.appendChild(el(&#x27;span&#x27;,&#x27;&#x27;, line)); }
     info.appendChild(row);
   });
   panel.appendChild(info);
-
-  if(emp.chart) panel.appendChild(renderChart(emp.chart));
-  emp.sections.forEach(sec=&gt; panel.appendChild(renderSection(sec)) );
-
+  emp.sections.forEach(sec=&gt; panel.appendChild(renderMainSection(sec)) );
   const firstSection = panel.querySelector(&#x27;.section&#x27;);
   if(firstSection) firstSection.classList.add(&#x27;first&#x27;);
-
   return panel;
 }
 
@@ -2157,17 +2290,132 @@ tabsNav.addEventListener(&#x27;keydown&#x27;, (e)=&gt;{
 "></iframe>
 </section>
 
+<!-- ==================== AUGUST ==================== -->
+<section id="view-august" class="view">
+  <div class="gate" id="augGate" style="display:none">
+    <div class="gate-card">
+      <h1 class="gate-title">מידע רגיש 🔒</h1>
+      <p class="gate-sub">הקובץ מוגן בסיסמה כי המידע כאן רגיש.</p>
+      <form id="aug-gate-form" autocomplete="off">
+        <label class="gate-label" for="aug-gate-pass">סיסמה</label>
+        <input class="gate-input" id="aug-gate-pass" name="password" type="password" autocomplete="off" required>
+        <button class="gate-btn" type="submit">יאללה אופיר, כמה הקדמות</button>
+        <p class="gate-error" id="aug-gate-error" hidden>סיסמה שגויה - נסו שוב</p>
+      </form>
+      <p class="gate-note">מסך זה נועד למניעת צפייה מקרית בלבד ואינו מהווה הגנת אבטחה מלאה.</p>
+    </div>
+  </div>
+  <div class="chrome">
+    <div class="chNav">
+      <a class="ch-home" href="#home">● דף הבית <span class="chCaret">▾</span></a>
+      <div class="chMenu" role="menu">
+        <a href="#home" data-view="home">דף הבית</a>
+        <a href="#projects" data-view="projects">פרוייקטים</a>
+        <a href="#employees" data-view="employees">צוות</a>
+        <a href="#august" data-view="august">תכנון אוגוסט</a>
+      </div>
+    </div>
+  </div>
+  <div class="augWrap">
+    <div class="eyebrow">זמינגו · תכנון קיבולת · אוגוסט 26</div>
+    <h1 class="mainTitle">תכנון אוגוסט</h1>
+    <div class="sunRule"></div>
+    <div class="augLegend">זהו תכנון צפוי שחשוב לי להעביר כדי לצמצם אי-ודאות במעבר של הצוות. ייתכנו שינויים בהתאם לצרכי הפרוייקטים ועבודת הצוות בפועל.</div>
+    <div class="augCard"><div class="augScroll"><table class="augTable" dir="rtl">
+<thead>
+<tr>
+ <th rowspan="2" class="augCat">קטגוריה</th>
+ <th rowspan="2">פרוייקט</th>
+ <th rowspan="2">אחריות</th>
+ <th rowspan="2" class="augNote">פרוייקטים וטיקטים</th>
+ <th colspan="2" class="pcol pgrp">יעל</th>
+ <th colspan="2" class="pcol pgrp">מאי</th>
+ <th colspan="2" class="pcol pgrp">רתם</th>
+ <th rowspan="2" class="pcol pgrp">ליטל</th>
+</tr>
+<tr>
+ <th class="num pcol">אחוז משרה</th><th class="num">שעות</th>
+ <th class="num pcol">אחוז משרה</th><th class="num">שעות</th>
+ <th class="num pcol">אחוז משרה</th><th class="num">שעות</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="augCat" rowspan="7">פרוייקטים בטוחים</td><td class="augProj">לאומי טרייד</td><td><span class="augOwner">בועז</span></td><td class="augNote">לא נוצל כל התקציב בצוות (נשארו 73 שעות לדיווח). אם לא יאושר תקציב קריפטו אפשר להשתמש בהם לדיווח של עדידי</td><td class="num pcol">46%</td><td class="num">50</td><td class="num pcol">94%</td><td class="num">170</td><td class="num pcol">22%</td><td class="num">40</td><td class="num pcol">63</td></tr>
+<tr><td class="augProj">מאוחדת אתר קריירה</td><td><span class="augOwner">נורה/ קרן</span></td><td class="augNote">תקציב הפרוייקט צפוי להיגמר באוגוסט. צריך לשים לב האם רתם נדרש לעבוד יותר מ-36 שעות באוגוסט. במידה וכן — לתאם את נושא התקציב מול קרן/ אסף.</td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td><td class="num"></td><td class="num pcol">20%</td><td class="num">36</td><td class="num pcol"></td></tr>
+<tr><td class="augProj">מאוחדת אתר ציבורי</td><td><span class="augOwner">נורה/ קרן</span></td><td class="augNote">20% משרה מתואם מול קרן.</td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td><td class="num"></td><td class="num pcol">20%</td><td class="num">36</td><td class="num pcol"></td></tr>
+<tr><td class="augProj">מאוחדת CRM</td><td><span class="augOwner">נורה/ קרן</span></td><td class="augNote">30% משרה מתואם מול קרן.</td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td><td class="num"></td><td class="num pcol">30%</td><td class="num">54</td><td class="num pcol"></td></tr>
+<tr><td class="augProj">רידמן</td><td><span class="augOwner">בועז</span></td><td class="augNote">תקציב פרוייקט — 135 שעות (15 ימי עבודה). יולי — 23, אוגוסט — 97, באפר לספטמבר — 15.</td><td class="num pcol">56%</td><td class="num">61</td><td class="num pcol"></td><td class="num"></td><td class="num pcol">20%</td><td class="num">36</td><td class="num pcol"></td></tr>
+<tr><td class="augProj">הנדריקס</td><td><span class="augOwner">נורה/ קרן</span></td><td class="augNote">9 שעות מאושרות ל-QA. במידה ויש דרישות עיצוב נוספות מהמוצר/ מהלקוח — נדרש לבקש תקציב נוסף מטל.</td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td><td class="num"></td><td class="num pcol">5%</td><td class="num">9</td><td class="num pcol"></td></tr>
+<tr><td class="augProj">gov.il</td><td><span class="augOwner">בועז</span></td><td class="augNote">תקציב הסטודיו התבסס על 640 שעות, לאוגוסט נשאר רק 45 שעות. נדרש לוודא תקציב נוסף מהאסטרטגיה לטובת עבודת הסטודיו שממשיכה לאוגוסט.</td><td class="num pcol">19%</td><td class="num">20</td><td class="num pcol">14%</td><td class="num">25</td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td></tr>
+<tr><td class="augCat" rowspan="3">פרוייקטים כתלות בדרישת לקוח / תקציב לא סגור</td><td class="augProj">פייבוקס מוצר (דלית)</td><td><span class="augOwner">בועז</span></td><td class="augNote">לראות האם הפרוייקטים ממשיכים גם לאוגוסט.</td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td></tr>
+<tr><td class="augProj">מנורה</td><td><span class="augOwner">בועז</span></td><td class="augNote">לקבוע תקציב מתוך אחד מבנקי השעות לאחר שיחת התיאום מול מאור ועמית.</td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td></tr>
+<tr><td class="augProj">לאומי טרייד קריפטו</td><td><span class="augOwner">בועז</span></td><td class="augNote">לקבוע תקציב לאחר אישור תקציבי סופי של הבנק.</td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td><td class="num"></td><td class="num pcol"></td></tr>
+</tbody>
+<tfoot>
+<tr class="augFoot">
+ <td colspan="4">ימי היעדרות צפויים באוגוסט</td>
+ <td colspan="2" class="num pcol">10</td>
+ <td colspan="2" class="num pcol">2</td>
+ <td colspan="2" class="num pcol">2</td>
+ <td class="num pcol"></td>
+</tr>
+<tr class="augTotal">
+ <td colspan="4">סך הכל משרה</td>
+ <td class="num pcol">131%</td><td class="num">131</td>
+ <td class="num pcol">110%</td><td class="num">195</td>
+ <td class="num pcol">119%</td><td class="num">211</td>
+ <td class="num pcol">63</td>
+</tr>
+</tfoot>
+</table></div></div>
+  </div>
+</section>
+
 <script>
 function route(){
   var h=(location.hash||'#home').replace('#','');
-  if(['home','projects','employees'].indexOf(h)<0) h='home';
-  ['home','projects','employees'].forEach(function(v){
+  if(['home','projects','employees','august'].indexOf(h)<0) h='home';
+  ['home','projects','employees','august'].forEach(function(v){
     document.getElementById('view-'+v).classList.toggle('active', v===h);
   });
+  Array.prototype.forEach.call(document.querySelectorAll('.chMenu a'), function(a){
+    a.classList.toggle('active', a.getAttribute('data-view')===h);
+  });
+  var ag=document.getElementById('augGate');
+  if(ag){
+    if(h==='august' && !window.__augUnlocked){ ag.style.display='flex'; var ip=document.getElementById('aug-gate-pass'); if(ip) ip.focus(); }
+    else { ag.style.display='none'; }
+  }
   window.scrollTo(0,0);
 }
+window.__augUnlocked=false;
+(function(){
+  var form=document.getElementById('aug-gate-form');
+  if(!form) return;
+  var input=document.getElementById('aug-gate-pass');
+  var err=document.getElementById('aug-gate-error');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(input.value.trim().toLowerCase()==='fifa'){
+      window.__augUnlocked=true;
+      var ag=document.getElementById('augGate'); if(ag) ag.style.display='none';
+    } else { err.hidden=false; input.value=''; input.focus(); }
+  });
+})();
 window.addEventListener('hashchange',route);
 route();
+
+window.projDetailChanged=function(open){
+  var b=document.getElementById('projBackBtn');
+  if(b){ b.style.display = open ? 'inline-flex' : 'none'; }
+};
+(function(){
+  var b=document.getElementById('projBackBtn');
+  if(b){ b.addEventListener('click', function(){
+    var fr=document.querySelector('#view-projects iframe');
+    try{ fr && fr.contentWindow && fr.contentWindow.closeDetail && fr.contentWindow.closeDetail(); }catch(e){}
+  }); }
+})();
 </script>
 </body>
 </html>
